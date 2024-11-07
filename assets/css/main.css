@@ -199,6 +199,12 @@ body {
   overflow: hidden;
 }
 
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 .header_menus {
   list-style: none;
 }
@@ -240,3 +246,253 @@ body {
     max-width: 100%;
   }
 }
+header .header_top {
+  background-color: #F5F7F8;
+  padding: 10px 0;
+}
+header .header_top_block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header_top_left {
+  display: flex;
+  gap: 54px;
+}
+header .header_top_phone a {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  text-decoration: none;
+  color: #20335D;
+  font-family: "Gilroy";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+header .header_top_social {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+header .header_search {
+  width: 490px;
+  border-radius: 100px;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px 6px 20px;
+}
+header .header_search input {
+  width: 85%;
+  border: none;
+  outline: none;
+  color: #1A1A1A;
+  font-family: "Gilroy";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 22.4px */
+}
+header .header_search input::-moz-placeholder {
+  color: #415C66;
+  font-family: "Gilroy";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+header .header_search input::placeholder {
+  color: #415C66;
+  font-family: "Gilroy";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+header .header_bottom {
+  background-color: #FFFFFF;
+  padding: 17px 0;
+}
+header .header_block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header_left {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
+header .logo_desc {
+  max-width: 339px;
+  width: 100%;
+  color: #6F7984;
+  font-family: "Gilroy";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+header .header_right {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+header .header_menus {
+  display: flex;
+  gap: 30px;
+}
+header .header_menus a {
+  color: #20335D;
+  font-family: "Gilroy";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+}
+header .header_menus a.active {
+  color: #1FAAE3;
+  font-weight: 700;
+}
+header .header_menus a:hover {
+  color: #1FAAE3;
+}
+header .buy_from {
+  outline: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 17px 30px;
+  border-radius: 100px;
+  background-color: #20335D;
+  color: #FFFFFF;
+  font-family: "Gilroy";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  transition: background-color 0.3s ease;
+}
+header .buy_from:hover {
+  background-color: #7C8AA8;
+}
+
+footer .footer_block {
+  background-color: #FFFFFF;
+}
+footer .footer_logo {
+  padding: 15px 0 2px;
+  border-bottom: 1px solid #F5F7F8;
+}
+footer .footer_logo img {
+  width: 140px;
+  height: auto;
+}
+footer .footer_main {
+  display: flex;
+  justify-content: space-between;
+  gap: 90px;
+  align-items: flex-start;
+  padding: 28px 0 63px;
+}
+footer .taking_tutorial {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+footer .taking_tutorial label {
+  color: #1A1A1A;
+  font-family: "Gilroy";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 28px */
+  margin-bottom: 14px;
+}
+footer .taking_tutorial input {
+  border: none;
+  outline: none;
+  border-radius: 100px;
+  background-color: #F5F7F8;
+  padding: 10px 16px;
+  width: 344px;
+  color: #1A1A1A;
+  font-family: "Gilroy";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 21px */
+  transition: all 0.3s ease;
+  margin-bottom: 12px;
+}
+footer .taking_tutorial input::-moz-placeholder {
+  color: #6F6F6F;
+}
+footer .taking_tutorial input::placeholder {
+  color: #6F6F6F;
+}
+footer .taking_tutorial input:focus {
+  background-color: #FFFFFF;
+  outline: 1px solid #1FAAE3;
+}
+footer .taking_tutorial button {
+  border: none;
+  outline: none;
+  border-radius: 100px;
+  background-color: #20335D;
+  padding: 11px;
+  text-align: center;
+  color: #FFFFFF;
+  width: 344px;
+  transition: background-color 0.3s ease;
+}
+footer .taking_tutorial button:hover {
+  background-color: #7C8AA8;
+}
+footer .footer_right {
+  display: flex;
+  gap: 90px;
+}
+footer .footer_title {
+  text-wrap: nowrap;
+  color: #1A1A1A;
+  font-family: "Gilroy";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 15px;
+}
+footer .footer_menus {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+footer .footer_menus a {
+  text-wrap: nowrap;
+  color: #6F6F6F;
+  font-family: "Gilroy";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: all 0.3s ease;
+}
+footer .footer_menus a:hover {
+  color: #20335D;
+  font-weight: 600;
+}
+footer .footer_address {
+  color: #6F6F6F;
+  font-family: "Gilroy";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}/*# sourceMappingURL=main.css.map */

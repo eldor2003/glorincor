@@ -182,3 +182,26 @@ body {
 .wrapper {
 	overflow: hidden;
 }
+
+// ====== ADDITIONAL SETTINGS ======
+// pixels
+$container-width: 1280px;
+
+// colors
+$dark-black: #1A1A1A;
+$dark: #292D31;
+$grey: #6F6F6F;
+$light-back: #F5F7F8;
+$white: #FFFFFF;
+$main-color: #20335D;
+$light-blue: #1FAAE3;
+// hover
+$main-color-hover: #7C8AA8;
+$light-blue-hover: #B0D8E9;
+
+
+.container{
+	max-width: $container-width;
+	width: 100%;
+	margin: 0 auto;
+}

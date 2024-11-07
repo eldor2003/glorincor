@@ -1,0 +1,133 @@
+header{
+    .header_top{
+        background-color: $light-back;
+        padding: 10px 0;
+    }
+    .header_top_block{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header_top_left{
+        display: flex;
+        gap: 54px;
+    }
+    .header_top_phone{
+        a{
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            text-decoration: none;
+            color: $main-color;
+            font-family: 'Gilroy';
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+    }
+    .header_top_social{
+        display: flex;
+        align-items: center;
+        gap: 22px;
+    }
+    .header_search{
+        width: 490px;
+        border-radius: 100px;
+        background-color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 15px 6px 20px;
+        input{
+            width: 85%;
+            border: none;
+            outline: none;
+            color: $dark-black;
+            font-family: 'Gilroy';
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%; /* 22.4px */
+            &::placeholder{
+                color: #415C66;
+                font-family: 'Gilroy';
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+            }
+        }
+    }
+
+    .header_bottom{
+        background-color: $white;
+        padding: 17px 0;
+    }
+    .header_block{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header_left{
+        display: flex;
+        align-items: center;
+        gap: 27px;
+    }
+    .logo_desc{
+        max-width: 339px;
+        width: 100%;
+        color: #6F7984;
+        font-family: 'Gilroy';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .header_right{
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+    .header_menus{
+        display: flex;
+        gap: 30px;
+        a{
+            color: $main-color;
+            font-family: 'Gilroy';
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            text-transform: capitalize;
+            transition: all .3s ease;
+            &.active{
+                color: $light-blue;
+                font-weight: 700;
+            }
+            &:hover{
+                color: $light-blue;
+            }
+        }
+    }
+    .buy_from{
+        outline: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 17px 30px;
+        border-radius: 100px;
+        background-color: $main-color;
+        color: $white;
+        font-family: 'Gilroy';
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        transition: background-color .3s ease;
+        &:hover{
+            background-color: $main-color-hover;
+        }
+    }
+}
