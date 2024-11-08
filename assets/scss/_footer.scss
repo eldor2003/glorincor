@@ -61,6 +61,12 @@ footer{
             padding: 11px;
             text-align: center;
             color: $white;
+            text-align: center;
+            font-family: 'Gilroy';
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 140%; /* 22.4px */
             width: 344px;
             transition: background-color .3s ease;
             &:hover{
@@ -105,6 +111,23 @@ footer{
         color: $grey;
         font-family: 'Gilroy';
         font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .site_infos{
+        background-color: $light-back;
+        padding: 12px 0;
+    }
+    .footer_bottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .footer_bottom_item{
+        color: $dark;
+        font-family: 'Gilroy';
+        font-size: 12px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;

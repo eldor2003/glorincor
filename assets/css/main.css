@@ -205,46 +205,31 @@ body {
   margin: 0 auto;
 }
 
+.search_overlay {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background: rgba(32, 51, 93, 0.19);
+  -webkit-backdrop-filter: blur(0.5px);
+          backdrop-filter: blur(0.5px);
+}
+
 .header_menus {
   list-style: none;
 }
 
-@media (max-width: 1920px) {
-  .container {
-    max-width: 1620px;
-    margin: 0 auto;
-    padding: 0;
-  }
+header .mobile_search_block {
+  display: none;
 }
-@media (max-width: 1600px) {
-  .container {
-    max-width: 1320px;
-  }
+header .hamurger_menu {
+  display: none;
 }
-@media (max-width: 1400px) {
-  .container {
-    max-width: 1140px;
-  }
-}
-@media (max-width: 1200px) {
-  .container {
-    max-width: 960px;
-  }
-}
-@media (max-width: 992px) {
-  .container {
-    max-width: 720px;
-  }
-}
-@media (max-width: 768px) {
-  .container {
-    max-width: 540px;
-  }
-}
-@media (max-width: 576px) {
-  .container {
-    max-width: 100%;
-  }
+header .close {
+  display: none;
 }
 header .header_top {
   background-color: #F5F7F8;
@@ -255,9 +240,122 @@ header .header_top_block {
   justify-content: space-between;
   align-items: center;
 }
+header .header_top_right {
+  position: relative;
+}
+header .logo__mobile_desc {
+  display: none;
+}
+header .search_suggestions {
+  overflow: hidden;
+  display: none;
+  width: 100%;
+  max-height: 345px;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  padding: 25px;
+  position: absolute;
+  z-index: 1000;
+  top: 53px;
+}
+header .search_title {
+  color: #415C66;
+  font-family: "Gilroy";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 25px;
+}
+header .search_results_block .search_cards {
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  max-height: 295px;
+  overflow-y: auto;
+}
+header .search_results_block .search_card {
+  border-bottom: 1px solid #ECF2F4;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 15px 0;
+}
+header .search_results_block .search_card:last-child {
+  border-bottom: unset;
+}
+header .search_results_block .search_card_img {
+  background-color: #F5F7F8;
+  width: 61px;
+  height: 61px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .search_results_block .search_card_name {
+  color: #415C66;
+  font-family: "Gilroy";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+header .search_suggestions_block {
+  padding: 20px;
+  background-color: #20335D;
+  color: #F5F7F8;
+  border-radius: 20px;
+}
+header .search_suggestions_block .search_note {
+  font-family: "Gilroy";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+header .search_suggestions_block .search_cards {
+  display: flex;
+  flex-direction: column;
+}
+header .search_suggestions_block .search_card {
+  border-bottom: 1px solid #29456E;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 7px 0;
+}
+header .search_suggestions_block .search_card:last-child {
+  border-bottom: unset;
+}
+header .search_suggestions_block .search_card_img {
+  background-color: #29456E;
+  width: 61px;
+  height: 61px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .search_suggestions_block .search_card_name {
+  color: #FFFFFF;
+  font-family: "Gilroy";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
 header .header_top_left {
   display: flex;
   gap: 54px;
+}
+header .mobile_search {
+  display: none;
+}
+header .mobile_search button {
+  outline: none;
+  border: none;
+  background-color: transparent;
 }
 header .header_top_phone a {
   display: flex;
@@ -277,7 +375,10 @@ header .header_top_social {
   gap: 22px;
 }
 header .header_search {
+  position: relative;
+  z-index: 2;
   width: 490px;
+  height: 44px;
   border-radius: 100px;
   background-color: #FFFFFF;
   display: flex;
@@ -311,6 +412,16 @@ header .header_search input::placeholder {
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+}
+header .header_search .search_icon {
+  height: 24px;
+}
+header .header_search .search_clear {
+  display: none;
+  cursor: pointer;
+}
+header .header_search .search_clear img {
+  height: 24px;
 }
 header .header_bottom {
   background-color: #FFFFFF;
@@ -352,7 +463,7 @@ header .header_menus a {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  text-transform: capitalize;
+  text-wrap: nowrap;
   transition: all 0.3s ease;
 }
 header .header_menus a.active {
@@ -449,6 +560,12 @@ footer .taking_tutorial button {
   padding: 11px;
   text-align: center;
   color: #FFFFFF;
+  text-align: center;
+  font-family: "Gilroy";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 22.4px */
   width: 344px;
   transition: background-color 0.3s ease;
 }
@@ -495,4 +612,236 @@ footer .footer_address {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+footer .site_infos {
+  background-color: #F5F7F8;
+  padding: 12px 0;
+}
+footer .footer_bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer_bottom_item {
+  color: #292D31;
+  font-family: "Gilroy";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media (max-width: 1400px) {
+  header .header_left {
+    gap: 20px;
+  }
+  header .header_menus {
+    gap: 20px;
+  }
+  header .header_right {
+    gap: 20px;
+  }
+}
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+  .search_overlay {
+    z-index: -1;
+  }
+  header .mobile_search_block {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    display: block;
+    background-color: #F5F7F8;
+    transition: left 0.5s ease;
+  }
+  header .mobile_search_block.active {
+    left: 0;
+  }
+  header .mobile_search_top {
+    background-color: #FFFFFF;
+    padding: 30px 0;
+    margin-bottom: 25px;
+  }
+  header .mobile_search_top .mobile_search_back {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #292D31;
+    font-family: "Gilroy";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  header .mobile_search_top .mobile_search_brand {
+    color: #000;
+    font-family: "Gilroy";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  header .mobile_search_top .container {
+    display: flex;
+    gap: 76px;
+  }
+  header .header_search {
+    width: 100%;
+    height: 55px;
+    z-index: 1000;
+  }
+  header .search_suggestions {
+    top: 180px;
+    max-width: 960px;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  header .header_bottom {
+    transition: all 0.3s ease;
+  }
+  header .header_bottom.active {
+    border-radius: 0 0 20px 20px;
+  }
+  header .logo__mobile_desc {
+    color: #6F7984;
+    font-family: "Gilroy";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  header .header_block {
+    flex-direction: column;
+  }
+  header .header_right {
+    position: relative;
+    bottom: 100%;
+    display: none;
+    padding-top: 16px;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    align-items: flex-start;
+  }
+  .header .header_menus {
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+  }
+  .header .header_menus li {
+    border-bottom: 1px solid #EBEDF4;
+    padding: 15px 0;
+  }
+  .header .header_menus li:last-child {
+    border-bottom: unset;
+  }
+  header .buy_from {
+    width: 50%;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  header .hamurger_menu {
+    display: block;
+  }
+  header .mobile_search {
+    display: block;
+  }
+  .header .header_top {
+    display: none;
+  }
+  header .header_left {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .header .logo_desc {
+    display: none;
+  }
+  footer .footer_main {
+    gap: 50px;
+  }
+  footer .footer_right {
+    gap: 30px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+  header .search_suggestions {
+    max-width: 720px;
+  }
+  footer .footer_main {
+    flex-direction: column;
+  }
+  footer .footer_left {
+    width: 100%;
+  }
+  footer .taking_tutorial {
+    width: 100%;
+    align-items: center;
+  }
+  footer .footer_logo {
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+  header .search_suggestions {
+    max-width: 540px;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+  header .search_suggestions {
+    max-width: calc(100% - 32px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  header .header_logo img {
+    width: 160px;
+  }
+  header .logo__mobile_desc {
+    max-width: 343px;
+    width: 100%;
+  }
+  header .buy_from {
+    width: 100%;
+  }
+  footer .footer_main {
+    gap: 35px;
+  }
+  footer .footer_right {
+    flex-direction: column;
+    gap: 35px;
+  }
+  footer .footer_logo {
+    padding: 11px 0 7px;
+    border-bottom: unset;
+  }
+  footer .footer_logo img {
+    width: 88px;
+  }
+  footer .taking_tutorial label {
+    margin-bottom: 19px;
+  }
+  footer .taking_tutorial input {
+    margin-bottom: 10px;
+  }
+  footer .taking_tutorial input, footer .taking_tutorial button {
+    width: 100%;
+  }
 }/*# sourceMappingURL=main.css.map */

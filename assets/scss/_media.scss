@@ -1,37 +1,229 @@
-@media (max-width:1920px){
-    .container{
-        max-width: 1620px;
-        margin: 0 auto;
-        padding: 0;
-    }
-}
-@media (max-width:1600px){
-    .container{
-        max-width: 1320px;
-    }
-}
+
 @media (max-width:1400px){
-    .container{
-        max-width: 1140px;
+    header .header_left{
+        gap: 20px;
+    }
+    header .header_menus{
+        gap: 20px;
+    }
+    header .header_right {
+        gap: 20px;
     }
 }
 @media (max-width:1200px){
     .container{
         max-width: 960px;
     }
+    .search_overlay{
+        z-index: -1;
+    }
+    // header
+    header {
+        .mobile_search_block{
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 100%;
+            display: block;
+            background-color: $light-back;
+            transition: left 0.5s ease;
+            &.active{
+                left: 0;
+            }
+        }
+        .mobile_search_top{
+            background-color: $white;
+            padding: 30px 0;
+            margin-bottom: 25px;
+            .mobile_search_back{
+                outline: none;
+                border: none;
+                background-color: transparent;
+                display: flex;
+                align-items: center;
+                gap: 7px;
+
+                color: $dark;
+                font-family: 'Gilroy';
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+            }
+            .mobile_search_brand{
+                color: #000;
+                font-family: 'Gilroy';
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+            }
+            .container{
+                display: flex;
+                gap: 76px;
+            }
+        }
+        .header_search {
+            width: 100%;
+            height: 55px;
+            z-index: 1000;
+        }
+        .search_suggestions{
+            top: 180px;
+            max-width: 960px;
+            width: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    header .header_bottom{
+        transition: all .3s ease;
+    }
+    header .header_bottom.active{
+        border-radius: 0 0 20px 20px;
+    }
+    header .logo__mobile_desc{
+        color: #6F7984;
+        font-family: 'Gilroy';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    header .header_block{
+        flex-direction: column;
+    }
+    header .header_right{
+        position: relative;
+        bottom: 100%;
+        display: none;
+        padding-top: 16px;
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+        align-items: flex-start;
+    }
+    .header .header_menus{
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+    }
+    .header .header_menus li{
+        border-bottom: 1px solid #EBEDF4;
+        padding: 15px 0;
+    }
+    .header .header_menus li:last-child{
+        border-bottom: unset;
+    }
+    header .buy_from{
+        width: 50%;
+        margin: 0 auto;
+        justify-content: center;
+    }
+    header .hamurger_menu{
+        display: block;
+    }
+    header .mobile_search{
+        display: block;
+    }
+    .header .header_top {
+        display: none;
+    }
+    header .header_left{
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    header .header_right {
+        // display: none;
+    }
+    .header .logo_desc {
+        display: none;
+    }
+    // footer
+    footer .footer_main{
+        gap: 50px;
+    }
+    footer .footer_right{
+        gap: 30px;
+    }
 }
 @media (max-width:992px){
     .container{
         max-width: 720px;
+    }
+    header .search_suggestions{
+        max-width: 720px;
+    }
+    footer .footer_main{
+        flex-direction: column;
+
+    }
+    footer .footer_left{
+        width: 100%;
+    }
+    footer .taking_tutorial{
+        width: 100%;
+        align-items: center;
+    }
+    footer .footer_logo {
+        text-align: center;
     }
 }
 @media (max-width:768px){
     .container{
         max-width: 540px;
     }
+    header .search_suggestions{
+        max-width: 540px;
+    }
 }
 @media (max-width:576px){
     .container{
         max-width: 100%;
+        padding: 0 16px;
+    }
+    header .search_suggestions{
+        max-width: calc(100% - 32px);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    // header
+    header .header_logo img{
+        width: 160px;
+    }
+    header .logo__mobile_desc{
+        max-width: 343px;
+        width: 100%;
+    }
+    header .buy_from{
+        width: 100%;
+    }
+
+    // footer
+    footer .footer_main {
+        gap: 35px;
+    }
+    footer .footer_right {
+        flex-direction: column;
+        gap: 35px;
+
+    }
+    footer .footer_logo {
+        padding: 11px 0 7px;
+        border-bottom: unset;
+    }
+    footer .footer_logo img {
+        width: 88px;
+    }
+    footer .taking_tutorial label{
+        margin-bottom: 19px;
+    }
+    footer .taking_tutorial input{
+        margin-bottom: 10px;
+    }
+    footer .taking_tutorial input, footer .taking_tutorial button{
+        width: 100%;
     }
 }
