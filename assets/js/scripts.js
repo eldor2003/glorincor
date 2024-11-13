@@ -20,15 +20,25 @@ $(document).ready(function(){
 
     // search
     $(".header_search input").on('focus', function() {
+        $('.header_search').css("z-index", "99999");
+        $('.search_suggestions').css("z-index", "99999");
         $('.search_overlay').show(); // Elementni ko'rsatish
+        $('body').addClass('overlay');
         $('.search_icon').hide();
         $('.search_clear').show();
     });
     
     $('.search_overlay').on('click', function() {
+        $('body').removeClass('overlay');
         $('.search_overlay').hide(); // Elementni yashirish
         $('.search_icon').show();
         $('.search_clear').hide();
+        $('.header_search').css("z-index", "1");
+        $('.search_suggestions').css("z-index", "1");
+        $('.search_suggestions').hide();
+        $('.search_input').each(function() {
+            $(this).val('');
+        });
     });
 
 
@@ -58,7 +68,9 @@ $(document).ready(function(){
         });
     });
 
-    $("#search").on("input", function() {
+    $(".search_input").on("input", function() {
+        $('.header_search').css("z-index", "99999");
+        $('.search_suggestions').css("z-index", "99999");
         let query = $(this).val().toLowerCase();
         $('.search_suggestions').show();
 
@@ -125,7 +137,7 @@ $(document).ready(function(){
 
     // Tavsiyani tanlaganda inputga qo'shish
     $(document).on("click", ".suggestion-item", function() {
-        $("#search").val($(this).text());
+        $(".search_input").val($(this).text());
         $(".search_suggestions").hide(); // Natijalarni yashirish
         $('.search_clear').show();       // Clear tugmasini ko'rsatish
         $('.search_icon').hide();        // Ikonkani yashirish
@@ -134,7 +146,9 @@ $(document).ready(function(){
     // Clear tugmasiga bosilganda inputni tozalash
     $(".search_clear").on('click', function(e) {
         e.preventDefault();
-        $("#search").val('');    
+        $('.search_input').each(function() {
+            $(this).val('');
+        });
         $(".search_suggestions").hide(); // Tavsiyalarni yashirish
         $('.search_clear').hide();       // Clear tugmasini yashirish
         $('.search_icon').show();        // Ikonkani ko'rsatish
@@ -143,7 +157,9 @@ $(document).ready(function(){
 
     $(".search_clear").on('click', function(e) {
         e.preventDefault();            // Sahifani yangilanishini to'xtatish
-        $("#search").val('');    
+        $('.search_input').each(function() {
+            $(this).val('');
+        }); 
         $('.search_overlay').hide(); // Elementni yashirish
         $('.search_icon').show();
         $('.search_clear').hide();
@@ -153,9 +169,168 @@ $(document).ready(function(){
     $(".mobile_search_back").on('click', function(e){
         e.preventDefault();
         $(".mobile_search_block").removeClass('active')
+        $('.search_input').each(function() {
+            $(this).val('');
+        });
+        $(".search_suggestions").empty(); 
+        $('body').removeClass('overlay');
+        $('.search_overlay').hide(); // Elementni yashirish
     })
     $(".mobile_search button").on('click', function(e){
         e.preventDefault();
         $(".mobile_search_block").addClass('active')
     })
+
+
+
+
+
+    // MAIN SWIPER
+    var mainSwiper = new Swiper(".mainSwiper", {
+        navigation: {
+          nextEl: ".swiper_next",
+          prevEl: ".swiper_prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 10,
+        speed: 1500,
+        autoplay: {
+            delay: 2500, // Har bir slayd qancha vaqt ekranda turishini belgilaydi (millisekundlarda)
+            disableOnInteraction: false, // Foydalanuvchi o‘zaro aloqada bo‘lganda ham davom ettiradi
+          },
+      });
+    // PRODUCT SWIPER
+    var productSwiper = new Swiper(".productSwiper", {
+        slidesPerView: 3,
+        spaceBetween: 18,
+        loop: true,
+        navigation: {
+            nextEl: ".product_swiper_next",
+            prevEl: ".product_swiper_prev",
+        },
+        pagination: {
+            el: ".products_swiper_pagination",
+            type: "progressbar",
+        },
+        speed: 1000,
+        breakpoints: {
+            // when window width is >= 1200px
+            768: {
+                slidesPerView: 1,
+                centeredSlides: true,
+            },
+            992: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+                centeredSlides: true,
+            },
+            1200: {
+                slidesPerView: 3,
+                spaceBetween: 18,
+            }
+          }
+      });
+        var gloricorNews = new Swiper(".glorincorNewsSwiper", {
+        navigation: {
+          nextEl: ".glorincor_news_next",
+          prevEl: ".glorincor_news_prev",
+        },
+        pagination: {
+            el: ".glorincor_news-pagination",
+            clickable: true,
+        },
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 10,
+        speed: 1500,
+        autoplay: {
+            delay: 2500, // Har bir slayd qancha vaqt ekranda turishini belgilaydi (millisekundlarda)
+            disableOnInteraction: false, // Foydalanuvchi o‘zaro aloqada bo‘lganda ham davom ettiradi
+          },
+      });
+        var reviewsSwiper = new Swiper(".reviewsSwiper", {
+        navigation: {
+          nextEl: ".reviews_swiper_next",
+          prevEl: ".reviews_swiper_prev",
+        },
+        pagination: {
+            el: ".reviews_swiper_pagination",
+            clickable: true,
+        },
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 10,
+        speed: 1500,
+      });
+      
+
+      function updateShowAllButton() {
+        // Agar birorta checkbox tanlangan bo'lsa
+        if ($('.filterCheckbox:checked').length > 0) {
+            $(".catalog_filter_main .show_all").removeClass('active');
+        } else {
+            $(".catalog_filter_main .show_all").addClass('active');
+        }
+    }
+
+    // filterCheckbox holatini kuzatish
+    $('.filterCheckbox').each(function() {
+        var $checkbox = $(this);
+        var $desc = $checkbox.closest('li').find('.desc'); // .desc ni topish
+
+        // Initial holatni tekshirib chiqish (yani checkbox belgilangan yoki yo'q)
+        if ($checkbox.prop('checked')) {
+            $desc.css('color', '#20335D'); // $main-color
+            $desc.css('font-weight', '600'); // font-weight
+        } else {
+            $desc.css('color', '#6F7984'); // Asl rangini qaytarish
+            $desc.css('font-weight', '500'); // Asl font weightni qaytarish
+        }
+    });
+
+    // Boshlang'ich holat uchun updateShowAllButton funksiyasini chaqirish
+    updateShowAllButton();
+
+    // filterCheckbox holatini o'zgartirishni kuzatish
+    $('.filterCheckbox').change(function() {
+        var $checkbox = $(this);
+        var $desc = $checkbox.closest('li').find('.desc'); // .desc ni topish
+
+        // Agar checkbox belgilangan bo'lsa
+        if ($checkbox.prop('checked')) {
+            $desc.css('color', '#20335D'); // $main-color
+            $desc.css('font-weight', '600'); // font-weight
+        } else {
+            // Agar checkbox belgilangan bo'lmasa, rangni va font weightni default holatiga qaytarish
+            $desc.css('color', '#6F7984'); // Asl rangini qaytarish
+            $desc.css('font-weight', '500'); // Asl font weightni qaytarish
+        }
+
+        // Har bir checkbox o'zgartirilganda updateShowAllButton funksiyasini chaqirish
+        updateShowAllButton();
+    });
+
+     // .reset_filter ni bosganda barcha checkboxlarni uncheck qilish
+     $(".reset_filter").click(function() {
+        $('.filterCheckbox').prop('checked', false);  // Barcha checkbox'larni uncheck qilish
+        
+        // Barcha .desc ranglarini va font weight'larini asl holatiga qaytarish
+        $('.filterCheckbox').each(function() {
+            var $checkbox = $(this);
+            var $desc = $checkbox.closest('li').find('.desc'); // .desc ni topish
+            
+            // Rang va font weightni asl holatiga qaytarish
+            $desc.css('color', '#6F7984'); // Asl rangini qaytarish
+            $desc.css('font-weight', '500'); // Asl font weightni qaytarish
+        });
+
+        // Reset filter tugmasini bosganda, .show_all elementiga active klassini qo'shish
+        $(".catalog_filter_main .show_all").addClass('active');
+    });
+    
 });

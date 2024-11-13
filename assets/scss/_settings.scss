@@ -185,7 +185,7 @@ body {
 
 // ====== ADDITIONAL SETTINGS ======
 // pixels
-$container-width: 1280px;
+$container-width: 1281px;
 
 // colors
 $dark-black: #1A1A1A;
@@ -199,7 +199,9 @@ $light-blue: #1FAAE3;
 $main-color-hover: #7C8AA8;
 $light-blue-hover: #B0D8E9;
 
-
+body.overlay{
+	overflow: hidden;
+}
 .container{
 	max-width: $container-width;
 	width: 100%;
@@ -212,7 +214,7 @@ $light-blue-hover: #B0D8E9;
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 0;
+	z-index: 1;
 	background: rgba(32, 51, 93, 0.19);
 	backdrop-filter: blur(0.5px);
 }

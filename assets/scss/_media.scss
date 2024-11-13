@@ -1,5 +1,8 @@
 
 @media (max-width:1400px){
+    .container{
+        max-width: 1280px;
+    }
     header .header_left{
         gap: 20px;
     }
@@ -8,6 +11,56 @@
     }
     header .header_right {
         gap: 20px;
+    }
+
+    // ABOUT COMPANY
+    .our_products_bg{
+        min-width: 100%;
+        min-height: 100%;
+        width: unset;
+        height: unset;
+    }
+    .about_section .about_card {
+        min-height: 480px;
+    }
+    .about_section .about_card_desc {
+        max-width: 727px;
+        width: 100%;
+    }
+
+    // NEWS GLORINCOR
+    .glorincor_news .swiper_content_left .swiper_text{
+        max-width: 450px;
+    }
+    .glorincor_news .swiper{
+        height: 600px;
+    }
+    .glorincor_news .swiper_content::after{
+        height: 500px;
+    }
+    .glorincor_news .glorincor_news-pagination{
+        padding-left: 0;
+        left: -80px;
+        text-align: right;
+        top: -80px;
+    }
+    .news_card{
+        width: 361px;
+    }
+
+    // NEWS
+    .news_card_img img{
+        height: 254px;
+    }
+
+    // REVIEWS
+    .reviews_img img {
+        bottom: 33px;
+    }
+}
+@media (max-width: 1300px) {
+    .container{
+        max-width: 1150px;
     }
 }
 @media (max-width:1200px){
@@ -28,6 +81,7 @@
             display: block;
             background-color: $light-back;
             transition: left 0.5s ease;
+            z-index: 4000;
             &.active{
                 left: 0;
             }
@@ -84,6 +138,7 @@
         border-radius: 0 0 20px 20px;
     }
     header .logo__mobile_desc{
+        display: block;
         color: #6F7984;
         font-family: 'Gilroy';
         font-size: 16px;
@@ -141,6 +196,52 @@
     .header .logo_desc {
         display: none;
     }
+
+    // PRODUCT_ADV
+    .products_adv .product_swiper_prev {
+        left: 0;
+    }
+    .products_adv .product_swiper_next {
+        right: 0;
+    }
+
+    // ABOUT COMPANY
+    .about_section .about_card {
+        min-height: 620px;
+    }
+    .about_section .statistics{
+        gap: 10px;
+    }
+    .about_section .statistics_result h3{
+        font-size: 50px;
+    }
+    .our_products .row_5 {
+        display: grid;
+        grid-template-columns: repeat(4, calc(25% - 15px));
+    }
+    .our_products_card.centered .our_products_img {
+        bottom: 15px;
+    }
+    .news_cards {
+        grid-template-columns: repeat(2, calc(50% - 10px));
+    }
+    .news_card{
+        width: auto;
+    }
+    .news_card_img img {
+        height: auto;
+    }
+    .news_form{
+        width: calc(200% + 20px);
+        margin-bottom: 40px;
+    }
+
+    .reviews_img img {
+        bottom: 0;
+    }
+    .reviews .reviews_swiper_pagination {
+        bottom: 56px;
+    }
     // footer
     footer .footer_main{
         gap: 50px;
@@ -156,6 +257,14 @@
     header .search_suggestions{
         max-width: 720px;
     }
+
+    // HERO
+    .hero .swiper_content_box h2{
+        font-size: 34px;
+    }
+
+
+    // footer
     footer .footer_main{
         flex-direction: column;
 
