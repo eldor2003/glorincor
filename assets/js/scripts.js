@@ -267,6 +267,27 @@ $(document).ready(function(){
         spaceBetween: 10,
         speed: 1500,
       });
+
+    //   single gallery swiper
+    var singleGallerySwiper = new Swiper(".singleGallerySwiper", {
+        loop: false,
+        spaceBetween: 10,
+        slidesPerView: 3,
+        freeMode: true,
+        watchSlidesProgress: true,
+        direction: "vertical",
+      });
+      var singleSwiper = new Swiper(".singleSwiper", {
+        loop: false,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".single_swiper_next",
+          prevEl: ".single_swiper_prev",
+        },
+        thumbs: {
+          swiper: singleGallerySwiper,
+        },
+      });
       
 
       function updateShowAllButton() {
@@ -332,5 +353,19 @@ $(document).ready(function(){
         // Reset filter tugmasini bosganda, .show_all elementiga active klassini qo'shish
         $(".catalog_filter_main .show_all").addClass('active');
     });
+
+
+    // SINGLE TAB
+    $('.tab_content:first').show()
+    $('.tab_navigation li:first').addClass('active')
+
+    $('.tab_navigation li').click(function(event){
+        index = $(this).index();
+        $('.tab_navigation li').removeClass('active')
+        $(this).addClass('active')
+        $('.tab_content').hide()
+        $('.tab_content').eq(index).show()
+    })
+    
     
 });

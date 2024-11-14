@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Шрифты -->
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css">
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- fontawesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <!-- Css -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <title>Glorincor</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <!-- header -->
+        <header class="header" id="header">
+            <div class="mobile_search_block">
+                <div class="mobile_search_top">
+                    <div class="container">
+                        <button type="button" class="mobile_search_back">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                <path d="M11.083 12.2523L11.083 1.75227C11.0827 1.64596 11.0534 1.54176 10.9982 1.45087C10.9431 1.35999 10.8642 1.28587 10.77 1.23649C10.6759 1.18711 10.5701 1.16434 10.4639 1.17063C10.3578 1.17692 10.2554 1.21203 10.1678 1.27219L2.58445 6.52219C2.27003 6.73977 2.27003 7.2636 2.58445 7.48177L10.1678 12.7318C10.2552 12.7925 10.3577 12.8282 10.464 12.8348C10.5703 12.8414 10.6764 12.8188 10.7707 12.7694C10.8651 12.72 10.9441 12.6456 10.9991 12.5545C11.0542 12.4633 11.0832 12.3588 11.083 12.2523Z" fill="#292D31"/>
+                            </svg>
+                            <span>Назад</span>
+                        </button>
+                        <div class="mobile_search_brand">Поиск</div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="header_search">
+                        <input class="search_input" type="text" placeholder="Поиск по сайту">
+                        <!-- <img class="search_icon" src="./assets/img/header_top_search.svg" alt="search"> -->
+                        <a class="search_clear" href="#">
+                            <img src="./assets/img/search-clear.svg" alt="clear">
+                        </a>
+                    </div>
+                    <div class="search_suggestions">
+                    </div>
+                </div>
+            </div>
+            <div class="header_top">
+                <div class="container">
+                    <div class="header_top_block">
+                        <div class="header_top_left">
+                            <div class="header_top_phone">
+                                <a href="tel:88002017480">
+                                    <img src="./assets/img/header_top_phone.svg" alt="">
+                                    <span>8(800) 201-74-80</span>
+                                </a>
+                            </div>
+                            <div class="header_top_social">
+                                <a href="#">
+                                    <img src="./assets/img/header_top_telegram.svg" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="./assets/img/header_top_instagram.svg" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="./assets/img/header_top_vk.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="header_top_right">
+                            <div class="header_search">
+                                <input class="search_input" type="text" placeholder="Введите название продука. Например, Омега 3...">
+                                <img class="search_icon" src="./assets/img/header_top_search.svg" alt="search">
+                                <a class="search_clear" href="#">
+                                    <img src="./assets/img/search-clear.svg" alt="clear">
+                                </a>
+                            </div>
+                            <div class="search_suggestions">
+                                <div class="search_title">Результаты поиска</div>
+                                <div class="search_results_block">
+                                    <div class="search_cards">
+                                        <a href="#" class="search_card" data-id="id">
+                                            <div class="search_card_img">
+                                                <img src="./assets/img/search-result-img.svg" alt="">
+                                            </div>
+                                            <div class="search_card_name">Omega Premium</div>
+                                        </a>
+                                        <a href="#" class="search_card" data-id="id">
+                                            <div class="search_card_img">
+                                                <img src="./assets/img/search-result-img.svg" alt="">
+                                            </div>
+                                            <div class="search_card_name">Omega Ultimate</div>
+                                        </a>
+                                        <a href="#" class="search_card" data-id="id">
+                                            <div class="search_card_img">
+                                                <img src="./assets/img/search-result-img.svg" alt="">
+                                            </div>
+                                            <div class="search_card_name">Omega Original</div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="search_suggestions_block">
+                                    <div class="search_note">Наши новинки для здоровья волос и кожи</div>
+                                    <div class="search_cards">
+                                        <a href="#" class="search_card" data-id="id">
+                                            <div class="search_card_img">
+                                                <img src="./assets/img/search-result-img.svg" alt="">
+                                            </div>
+                                            <div class="search_card_name">Omega Ultimate</div>
+                                        </a>
+                                        <a href="#" class="search_card" data-id="id">
+                                            <div class="search_card_img">
+                                                <img src="./assets/img/search-result-img.svg" alt="">
+                                            </div>
+                                            <div class="search_card_name">Omega Original</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header_bottom">
+                <div class="container">
+                    <div class="header_block">
+                        <div class="header_left">
+                            <!-- hamburger_mobile -->
+                            <div class="hamurger_menu">
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" viewBox="0 0 18 12" fill="none">
+                                        <g clip-path="url(#clip0_591_3491)">
+                                        <path d="M1 12H17C17.55 12 18 11.55 18 11C18 10.45 17.55 10 17 10H1C0.45 10 0 10.45 0 11C0 11.55 0.45 12 1 12ZM1 7H17C17.55 7 18 6.55 18 6C18 5.45 17.55 5 17 5H1C0.45 5 0 5.45 0 6C0 6.55 0.45 7 1 7ZM0 1C0 1.55 0.45 2 1 2H17C17.55 2 18 1.55 18 1C18 0.45 17.55 0 17 0H1C0.45 0 0 0.45 0 1Z" fill="black"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_591_3491">
+                                        <rect width="18" height="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </div>
+                            <!-- mobile close menus -->
+                            <span class="close">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                    <g clip-path="url(#clip0_591_3812)">
+                                      <path d="M2.74759 15.4736C1.888 14.6434 1.20236 13.6503 0.730681 12.5522C0.259 11.4542 0.0107242 10.2732 0.000339811 9.0782C-0.0100445 7.88319 0.217671 6.69807 0.670199 5.59201C1.12273 4.48594 1.791 3.48107 2.63604 2.63604C3.48107 1.791 4.48594 1.12273 5.59201 0.670199C6.69807 0.217671 7.88319 -0.0100445 9.0782 0.000339811C10.2732 0.0107242 11.4542 0.259 12.5522 0.730681C13.6503 1.20236 14.6434 1.888 15.4736 2.74759C17.113 4.44501 18.0202 6.71843 17.9997 9.0782C17.9792 11.438 17.0326 13.6953 15.364 15.364C13.6953 17.0326 11.438 17.9792 9.0782 17.9997C6.71843 18.0202 4.44501 17.113 2.74759 15.4736ZM10.3706 9.11059L12.9176 6.56359L11.6486 5.29459L9.11059 7.84159L6.56359 5.29459L5.29459 6.56359L7.84159 9.11059L5.29459 11.6576L6.56359 12.9266L9.11059 10.3796L11.6576 12.9266L12.9266 11.6576L10.3796 9.11059H10.3706Z" fill="#20335D"/>
+                                    </g>
+                                    <defs>
+                                      <clipPath id="clip0_591_3812">
+                                        <rect width="18" height="18" fill="white"/>
+                                      </clipPath>
+                                    </defs>
+                                </svg>
+                            </span>
+                            <div class="header_logo">
+                                <a href="#">
+                                    <img src="./assets/img/logo.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="logo_desc">
+                                Oфициальный интернет-магазин GLORINCOR PHARMACEUTICALS
+                            </div>
+                            <div class="mobile_search">
+                                <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="24" viewBox="0 0 22 24" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0064 3C8.72963 3.00011 7.47135 3.30554 6.3366 3.89082C5.20184 4.4761 4.2235 5.32425 3.48321 6.36452C2.74293 7.40478 2.26215 8.60698 2.081 9.87083C1.89985 11.1347 2.02358 12.4235 2.44186 13.6298C2.86014 14.8361 3.56085 15.9249 4.48552 16.8054C5.41019 17.6858 6.53201 18.3324 7.75739 18.6911C8.98278 19.0498 10.2762 19.1103 11.5297 18.8676C12.7832 18.6248 13.9605 18.0858 14.9633 17.2955L18.4036 20.7356C18.5812 20.9072 18.8192 21.0021 19.0662 21C19.3132 20.9978 19.5494 20.8988 19.7241 20.7241C19.8987 20.5495 19.9978 20.3132 20 20.0662C20.0021 19.8192 19.9072 19.5813 19.7356 19.4036L16.2953 15.9635C17.226 14.7829 17.8055 13.364 17.9675 11.8694C18.1295 10.3748 17.8674 8.86478 17.2112 7.51217C16.555 6.15955 15.5312 5.019 14.2571 4.22102C12.9829 3.42305 11.5099 2.9999 10.0064 3ZM3.88335 11.0068C3.88335 9.38294 4.52846 7.82556 5.67676 6.6773C6.82506 5.52904 8.3825 4.88396 10.0064 4.88396C11.6304 4.88396 13.1878 5.52904 14.3361 6.6773C15.4844 7.82556 16.1295 9.38294 16.1295 11.0068C16.1295 12.6307 15.4844 14.1881 14.3361 15.3363C13.1878 16.4846 11.6304 17.1297 10.0064 17.1297C8.3825 17.1297 6.82506 16.4846 5.67676 15.3363C4.52846 14.1881 3.88335 12.6307 3.88335 11.0068Z" fill="#1A1A1A"/>
+                                      </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="header_right">
+                            <div class="logo__mobile_desc">
+                                Oфициальный интернет-магазин GLORINCOR PHARMACEUTICALS
+                            </div>
+                            <ul class="header_menus">
+                                <li><a href="#">Каталог продукции</a></li>
+                                <li><a href="#" class="active">О компании</a></li>
+                                <li><a href="#">Контакты</a></li>
+                                <li><a href="#">Блог</a></li>
+                            </ul>
+                            <button class="buy_from">
+                                <span>Где купить</span>
+                                <img src="./assets/img/button_arrow.svg" alt="">
+                            </button>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="breadcrumbs">
+                <div class="container">
+                    <ul>
+                        <li class="link">
+                            <a href="#">Главная</a>
+                        </li>
+                        <li>></li>
+                        <li class="currently">О компании</li>
+                    </ul>
+                </div>
+            </div>
+
+            <section class="company_hero">
+                <div class="container">
+                    <div class="company_hero_card">
+                        <div class="card_box">
+                            <h3 class="card_title">Glorincor Pharmaceuticals</h3>
+                            <div class="text">ООО "Глоринкор Фармацевтика" – российская фармацевтическая компания, специализирующаяся на выпуске лекарственных препаратов, витаминно-минеральных комплексов, биологически-активных добавок.Продукция производится в соответствии с национальными требованиями по безопасности и качеству и проверяется внутренним лабораторным контролем. ООО "Глоринкор Фармацевтика" формирует продукты из натуральных и проверенных ингредиентов, предлагая безопасные и эффективные фармацевтические товары, и биологические добавки для здоровья.</div>
+                            <div class="list_title">Наши преимущества</div>
+                            <ul>
+                                <li>
+                                    <img src="./assets/img/company_list_check.svg" alt="check">
+                                    <span>Работаем на рынке здравоохранения с 2009 года.</span>
+                                </li>
+                                <li>
+                                    <img src="./assets/img/company_list_check.svg" alt="check">
+                                    <span> Опыт сложных международных логистических поставок 
+                                        фармацевтических продуктов</span>
+                                </li>
+                                <li>
+                                    <img src="./assets/img/company_list_check.svg" alt="check">
+                                    <span>Глубокая экспертиза госпитальных продаж лекарственных средств</span>
+                                </li>
+                                <li>
+                                    <img src="./assets/img/company_list_check.svg" alt="check">
+                                    <span>Обеспечение контроля качества и безопасности 
+                                        продуктов под собственными торговыми марками</span>
+                                </li>
+                                <li>
+                                    <img src="./assets/img/company_list_check.svg" alt="check">
+                                    <span>Глобальная кооперация с международными фармацевтическими 
+                                        заводами-производителями по всему миру (Европа, Азия)</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <button type="button">Смотреть каталог</button>
+                    </div>
+                    <div class="statistics">
+                        <div class="statistics_item">
+                            <div class="statistics_result">
+                                <h3>15 ЛЕТ</h3>
+                            </div>
+                            <div class="statistics_desc">2009 год основания компании</div>
+                        </div>
+                        <div class="statistics_item">
+                            <div class="statistics_result">
+                                <h3>1200+</h3>
+                                <span>отзывов</span>
+                            </div>
+                            <div class="statistics_desc">2009 год основания компании</div>
+                        </div>
+                        <div class="statistics_item">
+                            <div class="statistics_result">
+                                <h3>6000+</h3>
+                                <span>заказов</span>
+                            </div>
+                            <div class="statistics_desc">2009 год основания компании</div>
+                        </div>
+                        <div class="statistics_item">
+                            <div class="statistics_result">
+                                <h3>4,9</h3>
+                                <span>из 5</span>
+                            </div>
+                            <div class="statistics_desc">2009 год основания компании</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="company_offer">
+                <div class="container">
+                    <div class="company_offer_card">
+                        <h3 class="company_offer_title">Мы предлагаем</h3>
+                        <div class="card_items">
+                            <div class="card_item">
+                                <div class="card_img">
+                                    <img src="./assets/img/company_item1.svg" alt="item">
+                                </div>
+                                <div class="card_title">Омега 3 и рыбий жир</div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_img">
+                                    <img src="./assets/img/company_item2.svg" alt="item">
+                                </div>
+                                <div class="card_title">Омега 3 и рыбий жир</div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_img">
+                                    <img src="./assets/img/company_item2.svg" alt="item">
+                                </div>
+                                <div class="card_title">Омега 3 и рыбий жир</div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_img">
+                                    <img src="./assets/img/company_item2.svg" alt="item">
+                                </div>
+                                <div class="card_title">Омега 3 и рыбий жир</div>
+                            </div>
+                            <div class="card_item">
+                                <div class="card_img">
+                                    <img src="./assets/img/company_item2.svg" alt="item">
+                                </div>
+                                <div class="card_title">Омега 3 и рыбий жир</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- footer -->
+        <footer class="header" id="header">
+            <div class="footer_block">
+                <div class="container">
+                    <div class="footer_top">
+                        <div class="footer_logo">
+                            <a href="#">
+                                <img src="./assets/img/footer-logo.svg" alt="logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer_main">
+                        <div class="footer_left">
+                            <form name="taking_tutorial" id="taking_tutorial" class="taking_tutorial">
+                                <label for="tutorial_email">Получите бесплатный гайд</label>
+                                <input type="email" placeholder="Введите свою электронную почту">
+                                <button>Отправить</button>
+                            </form>
+                        </div>
+                        <div class="footer_right">
+                            <div class="footer_item">
+                                <div class="footer_title">Карта сайта</div>
+                                <ul class="footer_menus">
+                                    <li><a href="#">Каталог продукции</a></li>
+                                    <li><a href="#">О компании</a></li>
+                                    <li><a href="#">Контакты</a></li>
+                                    <li><a href="#">Блог</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer_item">
+                                <div class="footer_title">Контакты</div>
+                                <ul class="footer_menus">
+                                    <li><a href="tel:88002017480">88002017480</a></li>
+                                    <li><a href="mailto:someone@example.com">someone@example.com</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer_item">
+                                <div class="footer_title">Реквизиты</div>
+                                <div class="footer_address"> ООО "Глоринкор Фармацевтика". ОГРН 1097746627395 ИНН 7705899855123112, <br>Москва, Пресненская набережная 12, этаж 44, офис 4403, чп 12, ММДЦ «Москва-Сити», Башня «Федерация Запад» <br>88002017480</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site_infos">
+                <div class="container">
+                    <div class="footer_bottom">
+                        <div class="footer_bottom_item">Политика конфиденциальности</div>
+                        <div class="footer_bottom_item">Наверх</div>
+                        <div class="footer_bottom_item">@2024</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <div class="search_overlay">
+                                
+        </div>
+    </div>
+    <!-- Juqery -->
+    <script src="./assets/libs/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- JS -->
+    <script src="./assets/js/scripts.js"></script>
+</body>
+
+</html>

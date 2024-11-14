@@ -1,0 +1,190 @@
+.company_hero{
+    margin-bottom: 66px;
+    &_card{
+        border-radius: 33px;
+        background-attachment: local;
+        background: linear-gradient(275deg, rgba(0, 0, 0, 0.00) 5.95%, rgba(0, 0, 0, 0.60) 61.94%), url("../img/company_bg.png") lightgray center / cover no-repeat;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 55px 32px 40px;
+        overflow: hidden;
+        position: relative;
+        .card_box{
+            max-width: 648px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            z-index: 1;
+        }
+        .card_title{
+            color: $white;
+            font-family: 'Gilroy';
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 130%; /* 65px */
+            margin-bottom: 30px;
+        }
+        .text{
+            color: #C7E2EF;
+            font-family: 'Gilroy';
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 130%; /* 23.4px */
+            margin-bottom: 17px;
+        }
+        .list_title{
+            color: $white;
+            font-family: 'Gilroy';
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 130%; /* 28.6px */
+            margin-bottom: 19px;
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            li{
+                display: flex;
+                gap: 14px;
+                align-items: flex-start;
+            }
+            img{
+                width: 26px;
+            }
+            span{
+                color: $white;
+                font-family: 'Gilroy';
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 130%; /* 23.4px */
+            }
+        }
+        button{
+            border: none;
+            outline: none;
+            background-color: $light-blue;
+            border-radius: 100px;
+            padding: 12px 22px;
+            position: absolute;
+            bottom: 60px;
+            right: 73px;
+            color: $white;
+            text-align: center;
+            font-family: 'Gilroy';
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            cursor: pointer;
+            transition: background-color .3s ease;
+            &:hover{
+                background-color: $light-blue-hover;
+            }
+        }
+    }
+    .statistics{
+		margin: 70px 0 150px;
+		display: flex;
+		justify-content: space-between;
+	}
+	.statistics_item{
+		max-width: 254px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+	.statistics_result{
+		display: flex;
+		justify-content: center;
+		align-items: end;
+		h3{
+			color: $main-color;
+			text-align: center;
+			font-family: 'Gilroy';
+			font-size: 55px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: normal;
+			text-transform: uppercase;
+		}
+		span{
+			color: $main-color;
+			text-align: center;
+			font-family: 'Gilroy';
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: normal;
+			text-transform: uppercase;
+		}
+	}
+	.statistics_desc{
+		color: $dark-black;
+		text-align: center;
+		font-family: 'Gilroy';
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+	}
+}
+.company_offer{
+    margin-bottom: 160px;
+    &_card{
+        border-radius: 44px;
+        background: $white;
+        padding: 50px 55px;
+    }
+    &_title{
+        max-width: 289px;
+        width: 100%;
+        color: #000;
+        font-family: 'Gilroy';
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%; /* 65px */
+        margin-bottom: 40px;
+    }
+    .card_items{
+        display: flex;
+        justify-content: space-between;
+        // display: grid;
+        // grid-template-columns: repeat(5, calc(20% - 8px));
+        // gap: 40px;
+    }
+    .card_item{
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+        align-items: center;
+        .card_title{
+            color: $dark-black;
+            font-family: 'Gilroy';
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+    }
+    .card_img{
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+        background: $light-back;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .3s ease;
+        &:hover{
+            background-color: $white;
+            box-shadow: 0px 4px 15px 0px rgba(14, 27, 56, 0.08);
+        }
+    }
+}

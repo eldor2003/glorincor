@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Шрифты -->
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css">
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- fontawesome -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <!-- Css -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <title>Glorincor | Каталог</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header -->
+        <header class="header" id="header">
+            <div class="mobile_search_block">
+                <div class="mobile_search_top">
+                    <div class="container">
+                        <button type="button" class="mobile_search_back">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                fill="none">
+                                <path
+                                    d="M11.083 12.2523L11.083 1.75227C11.0827 1.64596 11.0534 1.54176 10.9982 1.45087C10.9431 1.35999 10.8642 1.28587 10.77 1.23649C10.6759 1.18711 10.5701 1.16434 10.4639 1.17063C10.3578 1.17692 10.2554 1.21203 10.1678 1.27219L2.58445 6.52219C2.27003 6.73977 2.27003 7.2636 2.58445 7.48177L10.1678 12.7318C10.2552 12.7925 10.3577 12.8282 10.464 12.8348C10.5703 12.8414 10.6764 12.8188 10.7707 12.7694C10.8651 12.72 10.9441 12.6456 10.9991 12.5545C11.0542 12.4633 11.0832 12.3588 11.083 12.2523Z"
+                                    fill="#292D31" />
+                            </svg>
+                            <span>Назад</span>
+                        </button>
+                        <div class="mobile_search_brand">Поиск</div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="header_search">
+                        <input class="search_input" type="text" placeholder="Поиск по сайту">
+                        <!-- <img class="search_icon" src="./assets/img/header_top_search.svg" alt="search"> -->
+                        <a class="search_clear" href="#">
+                            <img src="./assets/img/search-clear.svg" alt="clear">
+                        </a>
+                    </div>
+                    <div class="search_suggestions">
+                    </div>
+                </div>
+            </div>
+            <div class="header_top">
+                <div class="container">
+                    <div class="header_top_block">
+                        <div class="header_top_left">
+                            <div class="header_top_phone">
+                                <a href="tel:88002017480">
+                                    <img src="./assets/img/header_top_phone.svg" alt="">
+                                    <span>8(800) 201-74-80</span>
+                                </a>
+                            </div>
+                            <div class="header_top_social">
+                                <a href="#">
+                                    <img src="./assets/img/header_top_telegram.svg" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="./assets/img/header_top_instagram.svg" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="./assets/img/header_top_vk.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="header_top_right">
+                            <div class="header_search">
+                                <input class="search_input" type="text"
+                                    placeholder="Введите название продука. Например, Омега 3...">
+                                <img class="search_icon" src="./assets/img/header_top_search.svg" alt="search">
+                                <a class="search_clear" href="#">
+                                    <img src="./assets/img/search-clear.svg" alt="clear">
+                                </a>
+                            </div>
+                            <div class="search_suggestions">
+                                <div class="search_title">Результаты поиска</div>
+                                <div class="search_results_block">
+                                    <div class="search_cards">
+                                        <a href="#" class="search_card" data-id="id">
+                                            <div class="search_card_img">
+                                                <img src="./assets/img/search-result-img.svg" alt="">
+                                            </div>
+                                            <div class="search_card_name">Omega Premium</div>
+                                        </a>
+                                        <a href="#" class="search_card" data-id="id">
+                                            <div class="search_card_img">
+                                                <img src="./assets/img/search-result-img.svg" alt="">
+                                            </div>
+                                            <div class="search_card_name">Omega Ultimate</div>
+                                        </a>
+                                        <a href="#" class="search_card" data-id="id">
+                                            <div class="search_card_img">
+                                                <img src="./assets/img/search-result-img.svg" alt="">
+                                            </div>
+                                            <div class="search_card_name">Omega Original</div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="search_suggestions_block">
+                                    <div class="search_note">Наши новинки для здоровья волос и кожи</div>
+                                    <div class="search_cards">
+                                        <a href="#" class="search_card" data-id="id">
+                                            <div class="search_card_img">
+                                                <img src="./assets/img/search-result-img.svg" alt="">
+                                            </div>
+                                            <div class="search_card_name">Omega Ultimate</div>
+                                        </a>
+                                        <a href="#" class="search_card" data-id="id">
+                                            <div class="search_card_img">
+                                                <img src="./assets/img/search-result-img.svg" alt="">
+                                            </div>
+                                            <div class="search_card_name">Omega Original</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header_bottom">
+                <div class="container">
+                    <div class="header_block">
+                        <div class="header_left">
+                            <!-- hamburger_mobile -->
+                            <div class="hamurger_menu">
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" viewBox="0 0 18 12"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_591_3491)">
+                                            <path
+                                                d="M1 12H17C17.55 12 18 11.55 18 11C18 10.45 17.55 10 17 10H1C0.45 10 0 10.45 0 11C0 11.55 0.45 12 1 12ZM1 7H17C17.55 7 18 6.55 18 6C18 5.45 17.55 5 17 5H1C0.45 5 0 5.45 0 6C0 6.55 0.45 7 1 7ZM0 1C0 1.55 0.45 2 1 2H17C17.55 2 18 1.55 18 1C18 0.45 17.55 0 17 0H1C0.45 0 0 0.45 0 1Z"
+                                                fill="black" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_591_3491">
+                                                <rect width="18" height="12" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </div>
+                            <!-- mobile close menus -->
+                            <span class="close">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_591_3812)">
+                                        <path
+                                            d="M2.74759 15.4736C1.888 14.6434 1.20236 13.6503 0.730681 12.5522C0.259 11.4542 0.0107242 10.2732 0.000339811 9.0782C-0.0100445 7.88319 0.217671 6.69807 0.670199 5.59201C1.12273 4.48594 1.791 3.48107 2.63604 2.63604C3.48107 1.791 4.48594 1.12273 5.59201 0.670199C6.69807 0.217671 7.88319 -0.0100445 9.0782 0.000339811C10.2732 0.0107242 11.4542 0.259 12.5522 0.730681C13.6503 1.20236 14.6434 1.888 15.4736 2.74759C17.113 4.44501 18.0202 6.71843 17.9997 9.0782C17.9792 11.438 17.0326 13.6953 15.364 15.364C13.6953 17.0326 11.438 17.9792 9.0782 17.9997C6.71843 18.0202 4.44501 17.113 2.74759 15.4736ZM10.3706 9.11059L12.9176 6.56359L11.6486 5.29459L9.11059 7.84159L6.56359 5.29459L5.29459 6.56359L7.84159 9.11059L5.29459 11.6576L6.56359 12.9266L9.11059 10.3796L11.6576 12.9266L12.9266 11.6576L10.3796 9.11059H10.3706Z"
+                                            fill="#20335D" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_591_3812">
+                                            <rect width="18" height="18" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </span>
+                            <div class="header_logo">
+                                <a href="#">
+                                    <img src="./assets/img/logo.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="logo_desc">
+                                Oфициальный интернет-магазин GLORINCOR PHARMACEUTICALS
+                            </div>
+                            <div class="mobile_search">
+                                <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="24" viewBox="0 0 22 24"
+                                        fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M10.0064 3C8.72963 3.00011 7.47135 3.30554 6.3366 3.89082C5.20184 4.4761 4.2235 5.32425 3.48321 6.36452C2.74293 7.40478 2.26215 8.60698 2.081 9.87083C1.89985 11.1347 2.02358 12.4235 2.44186 13.6298C2.86014 14.8361 3.56085 15.9249 4.48552 16.8054C5.41019 17.6858 6.53201 18.3324 7.75739 18.6911C8.98278 19.0498 10.2762 19.1103 11.5297 18.8676C12.7832 18.6248 13.9605 18.0858 14.9633 17.2955L18.4036 20.7356C18.5812 20.9072 18.8192 21.0021 19.0662 21C19.3132 20.9978 19.5494 20.8988 19.7241 20.7241C19.8987 20.5495 19.9978 20.3132 20 20.0662C20.0021 19.8192 19.9072 19.5813 19.7356 19.4036L16.2953 15.9635C17.226 14.7829 17.8055 13.364 17.9675 11.8694C18.1295 10.3748 17.8674 8.86478 17.2112 7.51217C16.555 6.15955 15.5312 5.019 14.2571 4.22102C12.9829 3.42305 11.5099 2.9999 10.0064 3ZM3.88335 11.0068C3.88335 9.38294 4.52846 7.82556 5.67676 6.6773C6.82506 5.52904 8.3825 4.88396 10.0064 4.88396C11.6304 4.88396 13.1878 5.52904 14.3361 6.6773C15.4844 7.82556 16.1295 9.38294 16.1295 11.0068C16.1295 12.6307 15.4844 14.1881 14.3361 15.3363C13.1878 16.4846 11.6304 17.1297 10.0064 17.1297C8.3825 17.1297 6.82506 16.4846 5.67676 15.3363C4.52846 14.1881 3.88335 12.6307 3.88335 11.0068Z"
+                                            fill="#1A1A1A" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="header_right">
+                            <div class="logo__mobile_desc">
+                                Oфициальный интернет-магазин GLORINCOR PHARMACEUTICALS
+                            </div>
+                            <ul class="header_menus">
+                                <li><a href="#">Каталог продукции</a></li>
+                                <li><a href="#" class="active">О компании</a></li>
+                                <li><a href="#">Контакты</a></li>
+                                <li><a href="#">Блог</a></li>
+                            </ul>
+                            <button class="buy_from">
+                                <span>Где купить</span>
+                                <img src="./assets/img/button_arrow.svg" alt="">
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="breadcrumbs">
+                <div class="container">
+                    <ul>
+                        <li class="link">
+                            <a href="#">Главная</a>
+                        </li>
+                        <li>></li>
+                        <li class="link">
+                            <a href="#">Каталог продукции</a>
+                        </li>
+                        <li>></li>
+                        <li class="link">
+                            <a href="#">“Категория продукта”</a>
+                        </li>
+                        <li>></li>
+                        <li class="currently">“Названия продукта”</li>
+                    </ul>
+                </div>
+            </div>
+
+            <section class="single_card_section">
+                <div class="container">
+                    <div class="single_card">
+                        <div class="single_card_left">
+                            <div class="swiper singleSwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        1
+                                    </div>
+                                    <div class="swiper-slide">
+        2
+                                    </div>
+                                    <div class="swiper-slide">
+        3
+                                    </div>
+                                </div>
+                                <div class="swiper_btns">
+                                    <div class="single_swiper_prev">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="11" viewBox="0 0 15 11" fill="none">
+                                            <g clip-path="url(#clip0_610_7493)">
+                                              <path d="M1.11328 5.5611L6.19684 10.6447C6.29711 10.7449 6.41615 10.8245 6.54717 10.8787C6.67818 10.933 6.81859 10.9609 6.9604 10.9609C7.10221 10.9609 7.24262 10.933 7.37364 10.8787C7.50465 10.8245 7.62369 10.7449 7.72396 10.6447C7.82423 10.5444 7.90377 10.4253 7.95804 10.2943C8.01231 10.1633 8.04024 10.0229 8.04024 9.8811C8.04024 9.73929 8.01231 9.59888 7.95804 9.46786C7.90377 9.33685 7.82423 9.21781 7.72396 9.11754L5.24752 6.6411L13.4404 6.6411C13.7268 6.6411 14.0015 6.52732 14.2041 6.32478C14.4066 6.12224 14.5204 5.84753 14.5204 5.5611C14.5204 5.27467 14.4066 4.99996 14.2041 4.79743C14.0015 4.59489 13.7268 4.4811 13.4404 4.4811L5.24752 4.4811L7.72396 2.00466C7.8246 1.9046 7.90447 1.78562 7.95896 1.65458C8.01346 1.52354 8.04152 1.38302 8.04152 1.2411C8.04152 1.09918 8.01346 0.95866 7.95896 0.827621C7.90447 0.696581 7.8246 0.577605 7.72396 0.47754C7.52143 0.275071 7.24678 0.161332 6.9604 0.161332C6.67402 0.161332 6.39937 0.275071 6.19684 0.47754L1.11328 5.5611Z" fill="black"/>
+                                            </g>
+                                            <defs>
+                                              <clipPath id="clip0_610_7493">
+                                                <rect width="10.8" height="14.04" fill="white" transform="translate(0.480469 10.9609) rotate(-90)"/>
+                                              </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <div class="single_swiper_next">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="11" viewBox="0 0 15 11" fill="none">
+                                            <g clip-path="url(#clip0_610_7497)">
+                                              <path d="M13.8867 5.5611L8.80316 10.6447C8.70289 10.7449 8.58385 10.8245 8.45283 10.8787C8.32182 10.933 8.18141 10.9609 8.0396 10.9609C7.89779 10.9609 7.75738 10.933 7.62636 10.8787C7.49535 10.8245 7.37631 10.7449 7.27604 10.6447C7.17577 10.5444 7.09623 10.4253 7.04196 10.2943C6.98769 10.1633 6.95976 10.0229 6.95976 9.8811C6.95976 9.73929 6.98769 9.59888 7.04196 9.46786C7.09623 9.33685 7.17577 9.21781 7.27604 9.11754L9.75248 6.6411L1.5596 6.6411C1.27317 6.6411 0.998464 6.52732 0.795924 6.32478C0.593385 6.12224 0.4796 5.84753 0.4796 5.5611C0.4796 5.27467 0.593385 4.99996 0.795924 4.79743C0.998464 4.59489 1.27317 4.4811 1.5596 4.4811L9.75248 4.4811L7.27604 2.00466C7.1754 1.9046 7.09553 1.78562 7.04104 1.65458C6.98654 1.52354 6.95848 1.38302 6.95848 1.2411C6.95848 1.09918 6.98654 0.95866 7.04104 0.827621C7.09553 0.696581 7.1754 0.577605 7.27604 0.47754C7.47857 0.275071 7.75322 0.161332 8.0396 0.161332C8.32598 0.161332 8.60063 0.275071 8.80316 0.47754L13.8867 5.5611Z" fill="black"/>
+                                            </g>
+                                            <defs>
+                                              <clipPath id="clip0_610_7497">
+                                                <rect width="10.8" height="14.04" fill="white" transform="matrix(-1.19249e-08 -1 -1 1.19249e-08 14.5195 10.9609)"/>
+                                              </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div thumbsSlider="" class="swiper singleGallerySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        1
+                                    </div>
+                                    <div class="swiper-slide">
+        2
+                                    </div>
+                                    <div class="swiper-slide">
+        3
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single_card_right">
+                            <div class="product_desc">
+                                <h3>Витамин C Plus</h3>
+                                <p>Это высококачественная биологически активная добавка, разработанная для поддержания здоровья иммунной системы и общего благополучия. </p>
+                            </div>
+                            <div class="product_facilities">
+                                <div class="product_facility">
+                                    <h3>Активное вещество</h3>
+                                    <p>Аскорбиновая кислота</p>
+                                </div>
+                                <div class="product_facility">
+                                    <h3>Действие</h3>
+                                    <p>Витамин C играет важную роль в организме человека. Он помогает укрепить иммунитет, улучшает усвоение железа, участвует в синтезе коллагена (важного для здоровья кожи, суставов, связок)</p>
+                                </div>
+                                <div class="product_facility">
+                                    <h3>Упаковка</h3>
+                                    <p>60 таблеток</p>
+                                </div>
+                            </div>
+                            <div class="product_btn_box">
+                                <button type="button">Где купить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="single_tab">
+                <div class="container">
+                    <ul class="tab_navigation">
+                        <li class="active">О продукте</li>
+                        <li>Где купить</li>
+                        <li>Состав</li>
+                    </ul>
+                    <div class="tab_content_wrapper">
+                        <div class="tab_content">
+                            <div class="text">
+                                <div class="text_p">
+                                    <p>Витамин C Plus - это высококачественная биологически активная добавка, разработанная для поддержания здоровья иммунной системы и общего благополучия. Каждая капсула содержит оптимальную дозу аскорбиновой кислоты, обеспечивая организм необходимым количеством витамина C.</p>
+                                </div>
+                                <div class="text_p">
+                                    <p>Преимущества:</p>
+                                    <ul>
+                                        <li>Укрепляет иммунитет: Витамин C способствует поддержанию здоровья иммунной системы, помогая организму бороться с инфекциями.</li>
+                                        <li>Антиоксидантная защита: Благодаря своим антиоксидантным свойствам, витамин C помогает защитить клетки от вредного воздействия свободных радикалов.</li>
+                                        <li>Поддерживает здоровье кожи: Участвуя в синтезе коллагена, витамин C способствует здоровью кожи, делая ее упругой и ухоженной.</li>
+                                    </ul>
+                                </div>
+                                <div class="text_p">
+                                    <p>Рекомендации по применению: Принимать по одной капсуле "Витамин C Plus" в день, предпочтительно во время еды.</p>
+                                </div>
+                                <div class="text_p">
+                                    <p>Убедительно рекомендуем проконсультироваться с врачом перед началом приема любых добавок.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab_content">
+                            <div class="brand_cards">
+                                <div class="row_3">
+                                    <div class="brand_card">
+                                        <div class="img_box">
+                                            <img src="./assets/img/ozon_single.svg" alt="">
+                                        </div>
+                                        <div class="brand_card_body">
+                                            <p>Ozon</p>
+                                            <a href="#">
+                                                <span>Смотреть каталог ozon</span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                                    <path d="M10.9375 15.8125L16.5625 10.1875M16.5625 10.1875L10.9375 4.5625M16.5625 10.1875L3.4375 10.1875" stroke="#1FAAE3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="brand_card">
+                                        <div class="img_box">
+                                            <img style="border-radius: 20px;" src="./assets/img/wb_single.svg" alt="">
+                                        </div>
+                                        <div class="brand_card_body">
+                                            <p>Wildberries</p>
+                                            <a href="#">
+                                                <span>Смотреть каталог WB</span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                                    <path d="M10.9375 15.8125L16.5625 10.1875M16.5625 10.1875L10.9375 4.5625M16.5625 10.1875L3.4375 10.1875" stroke="#1FAAE3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="brand_card">
+                                        <div class="img_box">
+                                            <img src="./assets/img/mega market single.svg" alt="">
+                                        </div>
+                                        <div class="brand_card_body">
+                                            <p>Мегамаркет</p>
+                                            <a href="#">
+                                                <span>Смотреть каталог Мегамакрет</span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                                    <path d="M10.9375 15.8125L16.5625 10.1875M16.5625 10.1875L10.9375 4.5625M16.5625 10.1875L3.4375 10.1875" stroke="#1FAAE3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row_2">
+                                    <div class="brand_card">
+                                        <div class="img_box">
+                                            <img src="./assets/img/eapteka_single.svg" alt="">
+                                        </div>
+                                        <div class="brand_card_body">
+                                            <p>Интернет-аптека «Еаптека»</p>
+                                            <a href="#">
+                                                <span>Смотреть каталог Еаптека</span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                                    <path d="M10.9375 15.8125L16.5625 10.1875M16.5625 10.1875L10.9375 4.5625M16.5625 10.1875L3.4375 10.1875" stroke="#1FAAE3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="brand_card">
+                                        <div class="img_box">
+                                            <img src="./assets/img/yandex-market_single.svg" alt="">
+                                        </div>
+                                        <div class="brand_card_body">
+                                            <p>Яндекс Маркет</p>
+                                            <a href="#">
+                                                <span>Смотреть каталог Яндекс Маркет</span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                                    <path d="M10.9375 15.8125L16.5625 10.1875M16.5625 10.1875L10.9375 4.5625M16.5625 10.1875L3.4375 10.1875" stroke="#1FAAE3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab_content">
+                            <div class="text">
+                                <div class="text_p">
+                                    <p>"Витамин C" или аскорбиновая кислота — это важный витамин, необходимый для нормального функционирования организма человека. Вот некоторые основные составляющие витамина C:</p>
+                                </div>
+                                <ol>
+                                    <li>Аскорбиновая кислота: Это сам витамин C, который является антиоксидантом и помогает организму бороться с вредными свободными радикалами.</li>
+                                    <li>Биофлавоноиды: Это группа растительных соединений, которые могут улучшить усвоение витамина C и усилить его антиоксидантные свойства.</li>
+                                    <li>Рутина (витамин Р): Это также биофлавоноид, который считается важным для усвоения витамина C и поддержания кровеносных сосудов в здоровом состоянии.</li>
+                                    <li>Цитрусовые и другие фрукты и овощи: Они часто являются источниками витамина C и других питательных веществ, помогающих поддерживать здоровье.</li>
+                                    <li>Дополнительные компоненты: Витамин C часто продаётся в виде добавок, которые могут содержать дополнительные ингредиенты, такие как аскорбинаты, аскорбаты и другие вещества, которые могут улучшить усвоение или стабильность витамина.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="articles">
+                <div class="container">
+                    <h3 class="articles_title">Статьи</h3>
+                    <div class="articles_card">
+                        <div class="articles_card_left">
+                            <img src="./assets/img/articles_img.svg" alt="articles">
+                        </div>
+                        <div class="articles_card_right">
+                            <div class="articles_card_timing">
+                                <img src="./assets/img/g_icon.svg" alt="gloricor">
+                                <span>Glorincor • 11 июня 2024 года</span>
+                            </div>
+                            <div class="articles_card_title">Витаминные дефициты: почему нашему организму часто не хватает витаминов в повседневной жизни</div>
+                            <div class="article_card_desc">Несбалансированное питание, стрессы, загрязнение окружающей среды, неправильный образ жизни и другие факторы могут привести к дефициту витаминов. В этой статье мы рассмотрим, почему так часто возникают витаминные дефициты и какие меры можно принять для укрепления нашего здоровья...</div>
+                            <div>
+                                <a href="#">
+                                    <span>Смотреть каталог ozon</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                        <path d="M10.9375 15.8125L16.5625 10.1875M16.5625 10.1875L10.9375 4.5625M16.5625 10.1875L3.4375 10.1875" stroke="#1FAAE3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="catalog_recommend">
+                <div class="container">
+                    <h3 class="catalog_recommend_title">Рекомендуем</h3>
+                    <div class="swiper_part">
+                        <div class="swiper productSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="product_card">
+                                        <div class="card_facilities">
+                                            <div class="card_facility degree">
+                                                <img src="./assets/img/xit.svg" alt="xit">
+                                                <span>Хит</span>
+                                            </div>
+                                            <div class="card_facility name">
+                                                <img src="./assets/img/omega3.svg" alt="omega3">
+                                                <span>Омега 3 и рыбий жир</span>
+                                            </div>
+                                        </div>
+                                        <div class="card_img">
+                                            <img src="./assets/img/product_img.svg" alt="product-img">
+                                        </div>
+                                        <div class="card_title">
+                                            <h3>Омега-3 Original</h3>
+                                            <div class="card_rate">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                                    <g clip-path="url(#clip0_591_3130)">
+                                                      <path d="M9.50306 1.56734C9.60468 1.39472 9.75024 1.25148 9.92523 1.15194C10.1002 1.05239 10.2985 1 10.5003 1C10.7022 1 10.9005 1.05239 11.0755 1.15194C11.2504 1.25148 11.396 1.39472 11.4976 1.56734L14.0786 5.95332L19.0908 7.02833C19.288 7.07075 19.4705 7.16358 19.6201 7.29757C19.7697 7.43157 19.8813 7.60205 19.9436 7.79202C20.0059 7.98198 20.0168 8.1848 19.9753 8.38025C19.9337 8.57571 19.8411 8.75696 19.7068 8.90595L16.2901 12.6913L16.8072 17.7419C16.8276 17.9408 16.795 18.1415 16.7125 18.3239C16.6301 18.5064 16.5007 18.6643 16.3373 18.7818C16.174 18.8993 15.9823 18.9723 15.7816 18.9935C15.5808 19.0148 15.3779 18.9835 15.1931 18.9028L10.5003 16.8552L5.80757 18.9028C5.62281 18.9835 5.41991 19.0148 5.21913 18.9935C5.01835 18.9723 4.82671 18.8993 4.66334 18.7818C4.49998 18.6643 4.37062 18.5064 4.28816 18.3239C4.2057 18.1415 4.17305 17.9408 4.19345 17.7419L4.71056 12.6913L1.29394 8.90686C1.15933 8.75789 1.06655 8.57656 1.02487 8.38098C0.983182 8.18541 0.994049 7.98244 1.05638 7.79232C1.11872 7.6022 1.23033 7.4316 1.3801 7.29754C1.52986 7.16348 1.71252 7.07066 1.90985 7.02833L6.92213 5.95332L9.50306 1.56734Z" fill="#1A1A1A"/>
+                                                    </g>
+                                                    <defs>
+                                                      <clipPath id="clip0_591_3130">
+                                                        <rect width="22" height="22" fill="white"/>
+                                                      </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                <span>4.9</span>
+                                            </div>
+                                        </div>
+                                        <div class="card_desc">
+                                            <p>Упаковка: 60 шт</p>
+                                        </div>
+                                        <a href="#" class="card_btn">Где купить</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="product_card">
+                                        <div class="card_facilities">
+                                            <div class="card_facility degree">
+                                                <img src="./assets/img/xit.svg" alt="xit">
+                                                <span>Хит</span>
+                                            </div>
+                                            <div class="card_facility name">
+                                                <img src="./assets/img/omega3.svg" alt="omega3">
+                                                <span>Омега 3 и рыбий жир</span>
+                                            </div>
+                                        </div>
+                                        <div class="card_img">
+                                            <img src="./assets/img/product_img.svg" alt="product-img">
+                                        </div>
+                                        <div class="card_title">
+                                            <h3>Витамин C</h3>
+                                            <div class="card_rate">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                                    <g clip-path="url(#clip0_591_3130)">
+                                                      <path d="M9.50306 1.56734C9.60468 1.39472 9.75024 1.25148 9.92523 1.15194C10.1002 1.05239 10.2985 1 10.5003 1C10.7022 1 10.9005 1.05239 11.0755 1.15194C11.2504 1.25148 11.396 1.39472 11.4976 1.56734L14.0786 5.95332L19.0908 7.02833C19.288 7.07075 19.4705 7.16358 19.6201 7.29757C19.7697 7.43157 19.8813 7.60205 19.9436 7.79202C20.0059 7.98198 20.0168 8.1848 19.9753 8.38025C19.9337 8.57571 19.8411 8.75696 19.7068 8.90595L16.2901 12.6913L16.8072 17.7419C16.8276 17.9408 16.795 18.1415 16.7125 18.3239C16.6301 18.5064 16.5007 18.6643 16.3373 18.7818C16.174 18.8993 15.9823 18.9723 15.7816 18.9935C15.5808 19.0148 15.3779 18.9835 15.1931 18.9028L10.5003 16.8552L5.80757 18.9028C5.62281 18.9835 5.41991 19.0148 5.21913 18.9935C5.01835 18.9723 4.82671 18.8993 4.66334 18.7818C4.49998 18.6643 4.37062 18.5064 4.28816 18.3239C4.2057 18.1415 4.17305 17.9408 4.19345 17.7419L4.71056 12.6913L1.29394 8.90686C1.15933 8.75789 1.06655 8.57656 1.02487 8.38098C0.983182 8.18541 0.994049 7.98244 1.05638 7.79232C1.11872 7.6022 1.23033 7.4316 1.3801 7.29754C1.52986 7.16348 1.71252 7.07066 1.90985 7.02833L6.92213 5.95332L9.50306 1.56734Z" fill="#1A1A1A"/>
+                                                    </g>
+                                                    <defs>
+                                                      <clipPath id="clip0_591_3130">
+                                                        <rect width="22" height="22" fill="white"/>
+                                                      </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                <span>4.9</span>
+                                            </div>
+                                        </div>
+                                        <div class="card_desc">
+                                            <p>Упаковка: 60 шт</p>
+                                        </div>
+                                        <a href="#" class="card_btn">Где купить</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="product_card">
+                                        <div class="card_facilities">
+                                            <div class="card_facility degree">
+                                                <img src="./assets/img/xit.svg" alt="xit">
+                                                <span>Хит</span>
+                                            </div>
+                                            <div class="card_facility name">
+                                                <img src="./assets/img/omega3.svg" alt="omega3">
+                                                <span>Омега 3 и рыбий жир</span>
+                                            </div>
+                                        </div>
+                                        <div class="card_img">
+                                            <img src="./assets/img/product_img.svg" alt="product-img">
+                                        </div>
+                                        <div class="card_title">
+                                            <h3>Коллаген трипептидный</h3>
+                                            <div class="card_rate">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                                    <g clip-path="url(#clip0_591_3130)">
+                                                      <path d="M9.50306 1.56734C9.60468 1.39472 9.75024 1.25148 9.92523 1.15194C10.1002 1.05239 10.2985 1 10.5003 1C10.7022 1 10.9005 1.05239 11.0755 1.15194C11.2504 1.25148 11.396 1.39472 11.4976 1.56734L14.0786 5.95332L19.0908 7.02833C19.288 7.07075 19.4705 7.16358 19.6201 7.29757C19.7697 7.43157 19.8813 7.60205 19.9436 7.79202C20.0059 7.98198 20.0168 8.1848 19.9753 8.38025C19.9337 8.57571 19.8411 8.75696 19.7068 8.90595L16.2901 12.6913L16.8072 17.7419C16.8276 17.9408 16.795 18.1415 16.7125 18.3239C16.6301 18.5064 16.5007 18.6643 16.3373 18.7818C16.174 18.8993 15.9823 18.9723 15.7816 18.9935C15.5808 19.0148 15.3779 18.9835 15.1931 18.9028L10.5003 16.8552L5.80757 18.9028C5.62281 18.9835 5.41991 19.0148 5.21913 18.9935C5.01835 18.9723 4.82671 18.8993 4.66334 18.7818C4.49998 18.6643 4.37062 18.5064 4.28816 18.3239C4.2057 18.1415 4.17305 17.9408 4.19345 17.7419L4.71056 12.6913L1.29394 8.90686C1.15933 8.75789 1.06655 8.57656 1.02487 8.38098C0.983182 8.18541 0.994049 7.98244 1.05638 7.79232C1.11872 7.6022 1.23033 7.4316 1.3801 7.29754C1.52986 7.16348 1.71252 7.07066 1.90985 7.02833L6.92213 5.95332L9.50306 1.56734Z" fill="#1A1A1A"/>
+                                                    </g>
+                                                    <defs>
+                                                      <clipPath id="clip0_591_3130">
+                                                        <rect width="22" height="22" fill="white"/>
+                                                      </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                <span>4.9</span>
+                                            </div>
+                                        </div>
+                                        <div class="card_desc">
+                                            <p>Упаковка: 60 шт</p>
+                                        </div>
+                                        <a href="#" class="card_btn">Где купить</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="product_card">
+                                        <div class="card_facilities">
+                                            <div class="card_facility degree">
+                                                <img src="./assets/img/xit.svg" alt="xit">
+                                                <span>Хит</span>
+                                            </div>
+                                            <div class="card_facility name">
+                                                <img src="./assets/img/omega3.svg" alt="omega3">
+                                                <span>Омега 3 и рыбий жир</span>
+                                            </div>
+                                        </div>
+                                        <div class="card_img">
+                                            <img src="./assets/img/product_img.svg" alt="product-img">
+                                        </div>
+                                        <div class="card_title">
+                                            <h3>Омега-3 Original</h3>
+                                            <div class="card_rate">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                                    <g clip-path="url(#clip0_591_3130)">
+                                                      <path d="M9.50306 1.56734C9.60468 1.39472 9.75024 1.25148 9.92523 1.15194C10.1002 1.05239 10.2985 1 10.5003 1C10.7022 1 10.9005 1.05239 11.0755 1.15194C11.2504 1.25148 11.396 1.39472 11.4976 1.56734L14.0786 5.95332L19.0908 7.02833C19.288 7.07075 19.4705 7.16358 19.6201 7.29757C19.7697 7.43157 19.8813 7.60205 19.9436 7.79202C20.0059 7.98198 20.0168 8.1848 19.9753 8.38025C19.9337 8.57571 19.8411 8.75696 19.7068 8.90595L16.2901 12.6913L16.8072 17.7419C16.8276 17.9408 16.795 18.1415 16.7125 18.3239C16.6301 18.5064 16.5007 18.6643 16.3373 18.7818C16.174 18.8993 15.9823 18.9723 15.7816 18.9935C15.5808 19.0148 15.3779 18.9835 15.1931 18.9028L10.5003 16.8552L5.80757 18.9028C5.62281 18.9835 5.41991 19.0148 5.21913 18.9935C5.01835 18.9723 4.82671 18.8993 4.66334 18.7818C4.49998 18.6643 4.37062 18.5064 4.28816 18.3239C4.2057 18.1415 4.17305 17.9408 4.19345 17.7419L4.71056 12.6913L1.29394 8.90686C1.15933 8.75789 1.06655 8.57656 1.02487 8.38098C0.983182 8.18541 0.994049 7.98244 1.05638 7.79232C1.11872 7.6022 1.23033 7.4316 1.3801 7.29754C1.52986 7.16348 1.71252 7.07066 1.90985 7.02833L6.92213 5.95332L9.50306 1.56734Z" fill="#1A1A1A"/>
+                                                    </g>
+                                                    <defs>
+                                                      <clipPath id="clip0_591_3130">
+                                                        <rect width="22" height="22" fill="white"/>
+                                                      </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                <span>4.9</span>
+                                            </div>
+                                        </div>
+                                        <div class="card_desc">
+                                            <p>Упаковка: 60 шт</p>
+                                        </div>
+                                        <a href="#" class="card_btn">Где купить</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="product_card">
+                                        <div class="card_facilities">
+                                            <div class="card_facility degree">
+                                                <img src="./assets/img/xit.svg" alt="xit">
+                                                <span>Хит</span>
+                                            </div>
+                                            <div class="card_facility name">
+                                                <img src="./assets/img/omega3.svg" alt="omega3">
+                                                <span>Омега 3 и рыбий жир</span>
+                                            </div>
+                                        </div>
+                                        <div class="card_img">
+                                            <img src="./assets/img/product_img.svg" alt="product-img">
+                                        </div>
+                                        <div class="card_title">
+                                            <h3>Витамин C</h3>
+                                            <div class="card_rate">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                                    <g clip-path="url(#clip0_591_3130)">
+                                                      <path d="M9.50306 1.56734C9.60468 1.39472 9.75024 1.25148 9.92523 1.15194C10.1002 1.05239 10.2985 1 10.5003 1C10.7022 1 10.9005 1.05239 11.0755 1.15194C11.2504 1.25148 11.396 1.39472 11.4976 1.56734L14.0786 5.95332L19.0908 7.02833C19.288 7.07075 19.4705 7.16358 19.6201 7.29757C19.7697 7.43157 19.8813 7.60205 19.9436 7.79202C20.0059 7.98198 20.0168 8.1848 19.9753 8.38025C19.9337 8.57571 19.8411 8.75696 19.7068 8.90595L16.2901 12.6913L16.8072 17.7419C16.8276 17.9408 16.795 18.1415 16.7125 18.3239C16.6301 18.5064 16.5007 18.6643 16.3373 18.7818C16.174 18.8993 15.9823 18.9723 15.7816 18.9935C15.5808 19.0148 15.3779 18.9835 15.1931 18.9028L10.5003 16.8552L5.80757 18.9028C5.62281 18.9835 5.41991 19.0148 5.21913 18.9935C5.01835 18.9723 4.82671 18.8993 4.66334 18.7818C4.49998 18.6643 4.37062 18.5064 4.28816 18.3239C4.2057 18.1415 4.17305 17.9408 4.19345 17.7419L4.71056 12.6913L1.29394 8.90686C1.15933 8.75789 1.06655 8.57656 1.02487 8.38098C0.983182 8.18541 0.994049 7.98244 1.05638 7.79232C1.11872 7.6022 1.23033 7.4316 1.3801 7.29754C1.52986 7.16348 1.71252 7.07066 1.90985 7.02833L6.92213 5.95332L9.50306 1.56734Z" fill="#1A1A1A"/>
+                                                    </g>
+                                                    <defs>
+                                                      <clipPath id="clip0_591_3130">
+                                                        <rect width="22" height="22" fill="white"/>
+                                                      </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                <span>4.9</span>
+                                            </div>
+                                        </div>
+                                        <div class="card_desc">
+                                            <p>Упаковка: 60 шт</p>
+                                        </div>
+                                        <a href="#" class="card_btn">Где купить</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="product_card">
+                                        <div class="card_facilities">
+                                            <div class="card_facility degree">
+                                                <img src="./assets/img/xit.svg" alt="xit">
+                                                <span>Хит</span>
+                                            </div>
+                                            <div class="card_facility name">
+                                                <img src="./assets/img/omega3.svg" alt="omega3">
+                                                <span>Омега 3 и рыбий жир</span>
+                                            </div>
+                                        </div>
+                                        <div class="card_img">
+                                            <img src="./assets/img/product_img.svg" alt="product-img">
+                                        </div>
+                                        <div class="card_title">
+                                            <h3>Коллаген трипептидный</h3>
+                                            <div class="card_rate">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                                    <g clip-path="url(#clip0_591_3130)">
+                                                      <path d="M9.50306 1.56734C9.60468 1.39472 9.75024 1.25148 9.92523 1.15194C10.1002 1.05239 10.2985 1 10.5003 1C10.7022 1 10.9005 1.05239 11.0755 1.15194C11.2504 1.25148 11.396 1.39472 11.4976 1.56734L14.0786 5.95332L19.0908 7.02833C19.288 7.07075 19.4705 7.16358 19.6201 7.29757C19.7697 7.43157 19.8813 7.60205 19.9436 7.79202C20.0059 7.98198 20.0168 8.1848 19.9753 8.38025C19.9337 8.57571 19.8411 8.75696 19.7068 8.90595L16.2901 12.6913L16.8072 17.7419C16.8276 17.9408 16.795 18.1415 16.7125 18.3239C16.6301 18.5064 16.5007 18.6643 16.3373 18.7818C16.174 18.8993 15.9823 18.9723 15.7816 18.9935C15.5808 19.0148 15.3779 18.9835 15.1931 18.9028L10.5003 16.8552L5.80757 18.9028C5.62281 18.9835 5.41991 19.0148 5.21913 18.9935C5.01835 18.9723 4.82671 18.8993 4.66334 18.7818C4.49998 18.6643 4.37062 18.5064 4.28816 18.3239C4.2057 18.1415 4.17305 17.9408 4.19345 17.7419L4.71056 12.6913L1.29394 8.90686C1.15933 8.75789 1.06655 8.57656 1.02487 8.38098C0.983182 8.18541 0.994049 7.98244 1.05638 7.79232C1.11872 7.6022 1.23033 7.4316 1.3801 7.29754C1.52986 7.16348 1.71252 7.07066 1.90985 7.02833L6.92213 5.95332L9.50306 1.56734Z" fill="#1A1A1A"/>
+                                                    </g>
+                                                    <defs>
+                                                      <clipPath id="clip0_591_3130">
+                                                        <rect width="22" height="22" fill="white"/>
+                                                      </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                <span>4.9</span>
+                                            </div>
+                                        </div>
+                                        <div class="card_desc">
+                                            <p>Упаковка: 60 шт</p>
+                                        </div>
+                                        <a href="#" class="card_btn">Где купить</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products_swiper_pagination"></div>
+                        <div class="swiper_btns">
+                            <div class="product_swiper_prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                    <rect y="30" width="30" height="30" rx="15" transform="rotate(-90 0 30)" fill="white" fill-opacity="0.2"/>
+                                    <path d="M14 21L8 15M8 15L14 9M8 15L22 15" stroke="#20335D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M14 21L8 15M8 15L14 9M8 15L22 15" stroke="black" stroke-opacity="0.2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="product_swiper_next">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                    <rect width="30" height="30" rx="15" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 30 30)" fill="white" fill-opacity="0.2"/>
+                                    <path d="M16 21L22 15M22 15L16 9M22 15L8 15" stroke="#20335D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M16 21L22 15M22 15L16 9M22 15L8 15" stroke="black" stroke-opacity="0.2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- footer -->
+        <footer class="header" id="header">
+            <div class="footer_block">
+                <div class="container">
+                    <div class="footer_top">
+                        <div class="footer_logo">
+                            <a href="#">
+                                <img src="./assets/img/footer-logo.svg" alt="logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer_main">
+                        <div class="footer_left">
+                            <form name="taking_tutorial" id="taking_tutorial" class="taking_tutorial">
+                                <label for="tutorial_email">Получите бесплатный гайд</label>
+                                <input type="email" placeholder="Введите свою электронную почту">
+                                <button>Отправить</button>
+                            </form>
+                        </div>
+                        <div class="footer_right">
+                            <div class="footer_item">
+                                <div class="footer_title">Карта сайта</div>
+                                <ul class="footer_menus">
+                                    <li><a href="#">Каталог продукции</a></li>
+                                    <li><a href="#">О компании</a></li>
+                                    <li><a href="#">Контакты</a></li>
+                                    <li><a href="#">Блог</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer_item">
+                                <div class="footer_title">Контакты</div>
+                                <ul class="footer_menus">
+                                    <li><a href="tel:88002017480">88002017480</a></li>
+                                    <li><a href="mailto:someone@example.com">someone@example.com</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer_item">
+                                <div class="footer_title">Реквизиты</div>
+                                <div class="footer_address"> ООО "Глоринкор Фармацевтика". ОГРН 1097746627395 ИНН
+                                    7705899855123112, <br>Москва, Пресненская набережная 12, этаж 44, офис 4403, чп 12,
+                                    ММДЦ «Москва-Сити», Башня «Федерация Запад» <br>88002017480</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site_infos">
+                <div class="container">
+                    <div class="footer_bottom">
+                        <div class="footer_bottom_item">Политика конфиденциальности</div>
+                        <div class="footer_bottom_item">Наверх</div>
+                        <div class="footer_bottom_item">@2024</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <div class="search_overlay">
+
+        </div>
+
+    </div>
+
+    <!-- Juqery -->
+    <script src="./assets/libs/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- JS -->
+    <script src="./assets/js/scripts.js"></script>
+</body>
+
+</html>
