@@ -8,6 +8,9 @@
         padding: 55px 32px 40px;
         overflow: hidden;
         position: relative;
+        .company_card_mobile_img{
+            display: none;
+        }
         .card_box{
             max-width: 648px;
             width: 100%;

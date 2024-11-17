@@ -149,6 +149,12 @@
 			border-radius: 100px;
 			padding: 17px 43px;
 			color: $main-color;
+			font-family: 'Gilroy';
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 600;
+			line-height: normal;
+			cursor: pointer;
 			transition: all .3s ease;
 			&:hover{
 				color: $white;
@@ -161,28 +167,25 @@
 	.marquee_container{
 		background-color: $white;
 		margin-top: 50px;
-		min-width: 100vw;
-		overflow: hidden;
 		display: flex;
-		// gap: 50px;
+		// gap: 0px;
+		align-items: center;
+		width: max-content;
 	}
 	.marquee_block{
-		min-width: 100%;
 		display: flex;
-		justify-content: space-between;
+		gap: 60px;
 		align-items: center;
 		padding: 17px 30px;
-		// animation: marquee 10s linear infinite;
-		&:last-child{
-			animation: marq;
-		}
+		animation: slide 30s linear infinite;
+    	transition: .3s all ease;
 	}
-	@keyframes marquee {
+	@keyframes slide {
 		0% {
-			transform: translateX(100%);
+			transform: translateX(-100%);
 		}
 		100% {
-			transform: translateX(-100%);
+			transform: translateX(0%); /* Butun slayder kengligida harakat qiladi */
 		}
 	}
 	.marquee_item{
@@ -255,7 +258,6 @@
 			background: $white;
 			display: flex;
 			align-items: center;
-			border-radius: 68.092px;
 			background: $white;
 			box-shadow: 0px 4px 13px 0px rgba(16, 111, 150, 0.02);
 
@@ -366,19 +368,31 @@
 	}
 	.swiper-pagination-progressbar {
 		display: none;
+		overflow: hidden;
 		height: 10px;
 		top: calc(100% + 20px);
 		border-radius: 100px;
 		background: linear-gradient(0deg, $white 0%, $white 100%), $white;
 		.swiper-pagination-progressbar-fill{
-			height: 10px;
-			border-radius: 100px;
-			background: linear-gradient(
-				0deg,
-				rgba(0, 0, 0, 0.2) 0%,
-				rgba(0, 0, 0, 0.2) 100%
-			), 
-			$main-color;
+			// position: relative;
+			background: transparent;
+			z-index: 0;
+			&::after{
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 10px;
+				border-radius: 100px;
+				background: linear-gradient(
+					0deg,
+					rgba(0, 0, 0, 0.2) 0%,
+					rgba(0, 0, 0, 0.2) 100%
+				), 
+				$main-color;
+				z-index: 1;
+			}
 		}
 	}
 
@@ -521,6 +535,9 @@
 	border-radius: 44px;
 	background-color: $white;
 	padding: 64px 0 60px;
+	.swiper_block{
+		display: none;
+	}
 	&_top{
 		display: flex;
 		justify-content: space-between;
@@ -828,6 +845,9 @@
 
 .news{
 	padding-bottom: 120px;
+	.swiper_block{
+		display: none;
+	}
 	&_top{
 		display: flex;
 		justify-content: space-between;
@@ -1190,8 +1210,8 @@
 	}
 	.reviews_send{
 		position: absolute;
-		bottom: 0;
-		right: 0;
+		bottom: -20px;
+		right: 124px;
 		a{
 			color: $light-blue;
 			font-family: 'Gilroy';
@@ -1200,9 +1220,270 @@
 			font-weight: 600;
 			line-height: normal;
 			transition: color .3s ease;
+			cursor: pointer;
 			&:hover{
 				color: $light-blue-hover;
 			}
 		}
 	}
 }
+
+
+
+// MODAL
+.modal_box {
+    top: 0;
+    position: fixed; /* Absolute emas, fixed bo'lishi kerak */
+    width: 100%; /* Butunlay keng bo'lishi uchun */
+    height: 100vh;
+    overflow-y: auto; /* Scroll ni yoqish */
+    z-index: 6000;
+    background: rgba(0, 0, 0, 0.60);
+    display: none;
+    justify-content: center;
+    align-items: flex-start; /* Modal yuqorida chiqishi uchun */
+    padding: 100px 0;
+}
+.modal{
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 44px;
+	background-color: $white;
+	padding: 40px 70px 70px;
+	position: relative;
+	.modal_close{
+		position: absolute;
+		top: 30px;
+		right: 30px;
+		cursor: pointer;
+	}
+
+}
+.commend_modal{
+	display: none;
+	max-width: 590px;
+	width: 100%;
+	.commend_modal_img{
+		display: flex;
+		justify-content: center;
+		margin-bottom: 30px;
+	}
+	form{
+		display: flex;
+		flex-direction: column;
+		h3{
+			color: $dark-black;
+			text-align: center;
+			font-family: 'Gilroy';
+			font-size: 32px;
+			font-style: normal;
+			font-weight: 600;
+			line-height: normal;
+			margin-bottom: 8px;
+		}
+		p{
+		color: $dark-black;
+		text-align: center;
+		font-family: 'Gilroy';
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+		margin-bottom: 30px;
+		}
+		.form_group{
+			display: flex;
+			flex-direction: column-reverse;
+			gap: 6px;
+			margin-bottom: 15px;
+		}
+		label{
+			color: $dark-black;
+			font-family: 'Gilroy';
+			font-size: 15px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 140%; /* 21px */
+			transition: color .3s ease;
+		}
+		.product_select_label{
+			&.active{
+				color: $light-blue;
+			}
+		}
+		.form_send_btn{
+			border: none;
+			outline: none;
+			padding: 12px;
+			width: 100%;
+			background-color: $main-color;
+			border-radius: 100px;
+			color: $white;
+			font-family: 'Gilroy';
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 600;
+			line-height: normal;
+			cursor: pointer;
+			transition: background-color .3s ease;
+			&:hover{
+				background-color: $main-color-hover;
+			}
+		}
+		input{
+			outline: none;
+			border: none;
+			border-radius: 100px;
+			background: $light-back;
+			padding: 17px 20px;
+			transition: all .3s ease;
+			&::placeholder{
+				color: $grey;
+				font-family: 'Gilroy';
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 140%; /* 22.4px */
+			}
+			&:focus ~ label{
+				color: $light-blue;
+			}
+			&:focus{
+				background-color: transparent;
+				outline: 1px solid $light-blue;
+			}
+		}
+		textarea{
+			outline: none;
+			border: none;
+			resize: none;
+			height: 150px;
+			border-radius: 33px;
+			background: $light-back;
+			padding: 17px 20px;
+			transition: all .3s ease;
+			&::placeholder{
+				color: $grey;
+				font-family: 'Gilroy';
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 140%; /* 22.4px */
+			}
+			&:focus ~ label{
+				color: $light-blue;
+			}
+			&:focus{
+				background-color: transparent;
+				outline: 1px solid $light-blue;
+			}
+		}
+	}
+}
+/** Custom Select **/
+.custom-select-wrapper {
+	position: relative;
+	display: inline-block;
+	user-select: none;
+  }
+	.custom-select-wrapper select {
+	  display: none;
+	}
+	.custom-select {
+		width: 100%;
+	  position: relative;
+	  display: inline-block;
+	}
+	  .custom-select-trigger {
+		position: relative;
+		display: block;
+		width: 100%;
+		padding: 17px 20px;
+		font-size: 16px;
+		font-weight: 300;
+		color: &grey;
+		background: $light-back;
+		border-radius: 100px;
+		transition: all .3s e;
+		cursor: pointer;
+	  }
+	  .custom-select.opened .custom-select-trigger{
+		border: 1px solid $light-blue;
+		background-color: $white;
+		}
+		.custom-select-trigger:after {
+		  position: absolute;
+		  display: block;
+		  content: '';
+		  width: 24px; height: 24px;
+		  top: 15px; right: 20px;
+		  background-image: url("../img/select_icon.svg");
+		  background-size: cover;
+		  transition: all .4s ease-in-out;
+		}
+		.custom-select.opened .custom-select-trigger:after {
+		  transform: rotate(-180deg);
+		}
+	.custom-options {
+	  position: absolute;
+	  display: block;
+	  top: 100%; left: 0; right: 0;
+	  min-width: 100%;
+	  margin: 15px 0;
+	  border: 1px solid $light-blue;
+	  border-radius: 30px;
+	  box-sizing: border-box;
+	  background: $white;
+	  transition: all .4s ease-in-out;
+	  
+	  opacity: 0;
+	  visibility: hidden;
+	  pointer-events: none;
+	  transform: translateY(-15px);
+	}
+	.custom-select.opened .custom-options {
+	  opacity: 1;
+	  visibility: visible;
+	  pointer-events: all;
+	  transform: translateY(0);
+	}
+	//   .custom-options:before {
+	// 	position: absolute;
+	// 	display: block;
+	// 	content: '';
+	// 	bottom: 100%; right: 25px;
+	// 	width: 7px; height: 7px;
+	// 	margin-bottom: -4px;
+	// 	border-top: 1px solid #b5b5b5;
+	// 	border-left: 1px solid #b5b5b5;
+	// 	background: #fff;
+	// 	transform: rotate(45deg);
+	// 	transition: all .4s ease-in-out;
+	//   }
+	  .option-hover:before {
+		background: #f9f9f9;
+	  }
+	  .custom-option {
+		position: relative;
+		display: block;
+		padding: 20px;
+		border-bottom: 1px solid #ECF2F4;
+		font-size: 16px;
+		font-weight: 500;
+		color: #b5b5b5;
+		cursor: pointer;
+		transition: all .4s ease-in-out;
+	  }
+	  .custom-option:first-of-type {
+		border-radius: 30px 30px 0 0;
+	  }
+	  .custom-option:last-of-type {
+		border-bottom: 0;
+		border-radius: 0 0 30px 30px;
+	  }
+	  .custom-option:hover,
+	  .custom-option.selection { 
+		color: $main-color;
+		background: #f9f9f9;
+	  }

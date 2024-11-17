@@ -1,0 +1,90 @@
+.contact_section{
+    margin-bottom: 127px;
+    .contact_title{
+        color: $dark-black;
+        font-family: 'Gilroy';
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .container{
+        display: flex;
+        gap: 41px;
+    }
+    .row_3{
+        display: grid;
+        grid-template-columns: repeat(3, calc(33.33% - 13.33px));
+        gap: 20px;
+    }
+    .row_2{
+        display: grid;
+        grid-template-columns: calc(40% - 10px) calc(60% - 10px);
+        gap: 20px;
+    }
+    .contact_main{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .contact_card{
+        border-radius: 33px;
+        background: $white;
+        padding: 23px 30px;
+    }
+    .contact_card_title{
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        margin-bottom: 20px;
+        color: $dark-black;
+        font-family: 'Gilroy';
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .contact_card_info{
+        color: $dark-black;
+        font-family: 'Gilroy';
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-transform: lowercase;
+        margin-bottom: 13px;
+    }
+    .support{
+        color: #6F7984;
+        font-family: 'Gilroy';
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .social_icons{
+        display: flex;
+        gap: 14px 35px;
+        flex-wrap: wrap;
+        a{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: $dark;
+            font-family: 'Gilroy';
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+    }
+    .contact_card_desc{
+        color: $dark;
+        font-family: 'Gilroy';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+}
